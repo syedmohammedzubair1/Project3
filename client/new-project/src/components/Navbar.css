@@ -1,86 +1,5 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border-radius: 10px;
-}
-
-/* Company name area with a different background color */
-.navbar-left {
-    font-size: 1.5rem;
-    background-color: #444;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.navbar-right a,
-.navbar-right button {
-    margin-left: 4.5rem;
-    color: white;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.navbar-right {
-    display: flex;
-    align-items: center;
-    margin-right: 3rem;
-}
-
-/* Styling for links */
-.navbar-right a {
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.navbar-right a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-right a:hover::after {
-    width: 100%;
-    background-color: #f0a500; 
-}
-
-.navbar-right button:hover,
-.navbar-right a:hover {
-    color: inherit;
-}
-
-/* Initial white color for login button with fixed dimensions */
-.navbar-right button {
-    background-color: white;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100px;
-    height: 40px;
-}
-
-.navbar-right button:hover {
-    color: #f0a500;
-}
-
-.popup {
+/* Custom Popup Styling */
+/* .popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -90,62 +9,68 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1001;
-}
+} */
 
-.popup-content {
+/* .popup-content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.popup-button {
-    padding: 0.5rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.popup-button:hover {
-    background-color: #555;
-}
+} */
 
 body {
-    padding-top: 4rem; /* Adjust this value to ensure content is not hidden behind the fixed navbar */
+    padding-top: 80px; /* Adjusted for fixed navbar */
+}
+/* Add space between navbar items */
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Space between Home, About, Contact links */
 }
 
-/* Accessibility improvements with styled focus box */
-.navbar-right a:focus,
-.navbar-right button:focus,
-.popup-button:focus {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-    border-radius: 4px; 
-    padding-left: 5px;
-    padding-right: 5px;
-    box-shadow: 0 0 8px rgba(240, 165, 0, 0.5);
-    color: white; 
+/* Add space between the links and Login button */
+.navbar-nav .nav-item:last-child {
+    margin-left: 20px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Style for navbar links */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-    .navbar-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+/* Hover effect on nav links */
+.navbar-nav .nav-link:hover {
+    color: #ff8c00; /* Orange color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
 
-    .navbar-right a,
-    .navbar-right button {
-        margin-left: 0;
-        margin-bottom: 1rem;
-        width: 100%;
-        text-align: center;
-    }
+/* Style for Login button */
+.navbar-nav .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 30px; /* Rounded button */
+}
+
+/* Hover effect on Login button */
+.navbar-nav .btn:hover {
+    background-color: #ff8c00; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    color: white; /* Change text color */
+}
+
+/* Active link style */
+.navbar-nav .nav-link.active {
+    color: #ff8c00; /* Active link color */
+    font-weight: bold; /* Make active link bold */
+}
+
+/* Add separate background color to Company Name */
+.navbar-brand {
+    background-color: #23272b; /* You can change this color to your preference */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for Company Name */
+.navbar-brand:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white; /* Ensure text remains white on hover */
 }

@@ -52,7 +52,7 @@ export default function Carousel() {
     <div className="carousel-container">
       <div className="carousel-minicontainer">
         <Swiper
-          modules={[EffectCoverflow, Pagination, Autoplay]}
+          modules={[EffectCoverflow, Autoplay]}
           effect="coverflow"
           loop={true}
           grabCursor={true}
@@ -67,7 +67,7 @@ export default function Carousel() {
             slideShadows: false,
           }}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
+         
           className="custom-swiper"
         >
           {CarouselData.map((item, index) => (
