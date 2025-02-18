@@ -1,10 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+
+import Contact from './components/Footer/Contact';
 
 const App = () => {
     return (
         <div>
-            <Navbar />
+            <Contact/>
+            {/* hello */}
             {/* Your other content here */}
         </div>
     );
