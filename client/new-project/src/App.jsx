@@ -1,13 +1,13 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+import React from "react";
+
+import About from "./components/Footer/About";
 
 const App = () => {
-    return (
-        <div>
-            <Navbar />
-            {/* Your other content here */}
-        </div>
-    );
+  return (
+    <div>
+      <About />
+    </div>
+  );
 };
 
 export default App;
