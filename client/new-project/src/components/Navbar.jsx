@@ -8,6 +8,8 @@ const Navbar = () => {
     const handleLoginClick = () => {
         setIsLoginOpen(true);
         setIsSignupOpen(false);
+        document.querySelector('.navbar-right button').style.backgroundColor = '#333';
+        document.querySelector('.navbar-right button').style.color = 'white';
     };
 
     const handleSignupClick = () => {

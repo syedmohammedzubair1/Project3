@@ -4,9 +4,13 @@ import Navbar from './components/Navbar';
 import RegistrationForm from './components/Login/RegistrationForm';
 import Contact from './components/Footer/Contact';
 
+
 const App = () => {
     return (
         <div>
+
+            <Navbar />
+
             <About />
             <Contact/>
             {/* hello */}
