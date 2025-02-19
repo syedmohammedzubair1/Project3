@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./LoginForm.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { NavLink } from "react-router-dom";
 
 const LoginForm = ({ onSubmit }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,60 +30,62 @@ const LoginForm = ({ onSubmit }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="login-container">
-      <div className="login-header">
-        <h2>Login</h2>
-        <button
-          className="close-btn"
-          onClick={() => setIsVisible(false)}
-          aria-label="Close"
-        >
-          X
-        </button>
-      </div>
-      <form onSubmit={formik.handleSubmit} className="login-form">
-        {/* Email Field */}
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            {...formik.getFieldProps("email")}
-            className="form-input"
-          />
-          {formik.touched.email && formik.errors.email && (
-            <p className="error-text">{formik.errors.email}</p>
-          )}
+    <div className="container my-5 d-flex justify-content-center">
+      <div className="card shadow p-4" style={{ width: "400px" }}>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <h2 className="mb-0">Login</h2>
+          <button
+            className="btn-close"
+            onClick={() => setIsVisible(false)}
+            aria-label="Close"
+          ></button>
         </div>
-
-        {/* Password Field */}
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <div className="password-wrapper">
+        <form onSubmit={formik.handleSubmit}>
+          {/* Email Field */}
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email</label>
             <input
-              id="password"
-              type={showPassword ? "text" : "password"}
-              {...formik.getFieldProps("password")}
-              className="form-input"
+              id="email"
+              type="email"
+              {...formik.getFieldProps("email")}
+              className={`form-control ${formik.touched.email && formik.errors.email ? "is-invalid" : ""}`}
             />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="toggle-password"
-            >
-              {showPassword ? "Hide" : "Show"}
-            </button>
+            {formik.touched.email && formik.errors.email && (
+              <div className="invalid-feedback">{formik.errors.email}</div>
+            )}
           </div>
-          {formik.touched.password && formik.errors.password && (
-            <p className="error-text">{formik.errors.password}</p>
-          )}
-        </div>
 
-        {/* Submit Button */}
-        <button type="submit" className="login-btn" disabled={formik.isSubmitting}>
-          {formik.isSubmitting ? "Logging in..." : "Login"}
-        </button>
-      </form>
+          {/* Password Field */}
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Password</label>
+            <div className="input-group">
+              <input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                {...formik.getFieldProps("password")}
+                className={`form-control ${formik.touched.password && formik.errors.password ? "is-invalid" : ""}`}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="btn btn-outline-secondary"
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+              {formik.touched.password && formik.errors.password && (
+                <div className="invalid-feedback d-block">{formik.errors.password}</div>
+              )}
+            </div>
+          </div>
+          <NavLink to='/signup'>Not a User ?</NavLink>
+
+          {/* Submit Button */}
+          <button type="submit" className="btn btn-primary w-100 mt-3" disabled={formik.isSubmitting}>
+            {formik.isSubmitting ? "Logging in..." : "Login"}
+          </button>
+
+        </form>
+      </div>
     </div>
   );
 };
