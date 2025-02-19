@@ -18,11 +18,7 @@ const App = () => {
       <header>
         <Navbar />
       </header>
-      <LandingPage />
-      {/* Home Section */}
-      <Home /> {/* This will include Carousel and About */}
-
-      {/* Footer Section */}
+   
       <Footer />
     
     </div>
