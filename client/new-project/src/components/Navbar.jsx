@@ -1,55 +1,59 @@
 import React, { useState } from 'react';
-// import './Navbar.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
+import './Navbar.css'; // Optional custom styling
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
-    const [isSignupOpen, setIsSignupOpen] = useState(false);
-
-    const handleLoginClick = () => {
-        setIsLoginOpen(true);
-        setIsSignupOpen(false);
-    };
-
-    const handleSignupClick = () => {
-        setIsSignupOpen(true);
-        setIsLoginOpen(false);
+    const [activeLink, setActiveLink] = useState("home");
+    const navigate=useNavigate();
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
     };
 
     return (
         <div>
-            <nav className="navbar">
-                <div className="navbar-left">
-                    <span>Company Name</span>
-                </div>
-                <div className="navbar-right">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                    <button onClick={handleLoginClick}>Login</button>
+            {/* Navbar Section */}
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div className="container-fluid">
+                    <NavLink className="navbar-brand" to="/">Company Name</NavLink>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item">
+                                <NavLink
+                                    className={`nav-link ${activeLink === "home" ? "active" : ""}`}
+                                    to="/"
+                                >
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink
+                                    className={`nav-link ${activeLink === "about" ? "active" : ""}`}
+                                    to="/about"
+                                    onClick={() => handleLinkClick("about")}
+                                >
+                                    About
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink
+                                    className={`nav-link ${activeLink === "contact" ? "active" : ""}`}
+                                    to="/contact"
+                                    onClick={() => handleLinkClick("contact")}
+                                >
+                                    Contact
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <button className="btn btn-light"onClick={()=>navigate(`/login`)}>Login</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
-            {isLoginOpen && (
-                <div className="popup">
-                    <div className="popup-content">
-                        <h2>Login</h2>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <button className="popup-button">Login</button>
-                        <p>Don't have an account? <a href="#signup" onClick={handleSignupClick}>Click here</a></p>
-                    </div>
-                </div>
-            )}
-            {isSignupOpen && (
-                <div className="popup">
-                    <div className="popup-content">
-                        <h2>Signup</h2>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" />
-                        <button className="popup-button">Signup</button>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
