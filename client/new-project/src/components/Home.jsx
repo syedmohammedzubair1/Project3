@@ -3,6 +3,7 @@ import Carousel from './Carousel';
 import About from './Footer/About';
 import TrendingVideos from './TrendingVideos';
 import LikedVideos from './LikedVideos';
+import LandingPage from './LandingPage';
 
 const Home = () => {
   useEffect(() => {
@@ -12,6 +13,9 @@ const Home = () => {
 
   return (
     <div> 
+      <div className='me-0'>
+      <LandingPage/>
+      </div>
       <section>
         <TrendingVideos/>
       </section>

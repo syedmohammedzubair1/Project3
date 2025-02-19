@@ -7,7 +7,7 @@ const Footer = () => {
 
 
     <>
-      <footer className="container-fluid bg-warning text-black py-5">
+      <footer className="container-fluid bg-warning text-black p-5">
         <div className="container-fluid w-100">
           <div className="row">
             <div className="col-md-4">
@@ -43,7 +43,7 @@ const Footer = () => {
                 <p><NavLink to="/youtube" className="text-dark fw-bold text-decoration-none">YouTube</NavLink></p>
                 <p><NavLink to="/facebook" className="text-dark fw-bold text-decoration-none">Facebook</NavLink></p>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </footer>
