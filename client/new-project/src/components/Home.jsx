@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Carousel from './Carousel';
 import About from './Footer/About';
+import TrendingVideos from './TrendingVideos';
+import LikedVideos from './LikedVideos';
 
 const Home = () => {
   useEffect(() => {
@@ -10,6 +12,12 @@ const Home = () => {
 
   return (
     <div> 
+      <section>
+        <TrendingVideos/>
+      </section>
+      <section>
+        <LikedVideos/>
+      </section>
       <section className="my-5">
         <Carousel />
       </section>

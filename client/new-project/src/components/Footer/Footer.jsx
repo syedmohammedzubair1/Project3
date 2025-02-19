@@ -1,17 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink from React Router
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
+import { NavLink } from "react-router-dom"; 
+import "bootstrap/dist/css/bootstrap.min.css"; 
 
 const Footer = () => {
   return (
 
 
     <>
-      {/* Footer Section */}
       <footer className="container-fluid bg-warning text-black py-5">
-        <div className="container-fluid px-5">
+        <div className="container-fluid w-100">
           <div className="row">
-            {/* Left Section - Contact */}
             <div className="col-md-4">
               <h5 className="fw-bold">Contact</h5>
               <p>500 Terry Francine Street</p>
@@ -22,7 +20,6 @@ const Footer = () => {
             </div>
 
 
-            {/* Middle Section - Quick Links */}
             <div className="col-md-4">
               <h5 className="fw-bold">Quick Links</h5>
               <p><NavLink to="/terms" className="text-dark fw-bold text-decoration-none">Terms & Conditions</NavLink></p>
