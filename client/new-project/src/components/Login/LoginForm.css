@@ -1,7 +1,7 @@
-/* Set background color for the whole page */
+/* 
 body {
-    background-color: #f4f6f9; /* Light gray background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background-color: #f4f6f9; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
     height: 100vh;
   }
   
-  /* Centered login container */
+
   .login-container {
     position: absolute;
     top: 50%;
@@ -19,16 +19,14 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 25px;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
   }
-  
-  /* Header styling */
-  .login-header {
+    .login-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +37,7 @@ body {
   .login-header h2 {
     font-size: 26px;
     color: #333;
-    font-weight: 600; /* Bold font for the title */
+    font-weight: 600; 
     letter-spacing: 1px;
   }
   
@@ -56,7 +54,7 @@ body {
     color: #333;
   }
   
-  /* Form group styling */
+
   .form-group {
     margin-bottom: 18px;
   }
@@ -90,7 +88,7 @@ body {
     margin-top: 6px;
   }
   
-  /* Password field wrapper */
+ 
   .password-wrapper {
     position: relative;
   }
@@ -128,4 +126,4 @@ body {
     background-color: #ccc;
     cursor: not-allowed;
   }
-  
+   */
