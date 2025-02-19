@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap for styling
 
 const Footer = () => {
   return (
+
+
     <>
       {/* Footer Section */}
       <footer className="container-fluid bg-warning text-black py-5">
@@ -18,6 +20,7 @@ const Footer = () => {
               <p><strong>Sales:</strong> info@mysite.com</p>
               <p><strong>Customer Care:</strong> info@mysite.com</p>
             </div>
+
 
             {/* Middle Section - Quick Links */}
             <div className="col-md-4">

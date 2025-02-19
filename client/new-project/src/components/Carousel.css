@@ -97,7 +97,7 @@
   /* box-shadow: 0 0 10px #040404; */
   border-radius: 30px;
   outline: none;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +105,7 @@
 }
 
 .carousel-container .swiper {
-  width: 80%;
+  width: 100%;
 }
 
 .carousel-container .carousel-div {

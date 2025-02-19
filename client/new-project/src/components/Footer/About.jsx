@@ -9,8 +9,9 @@ const About = () => {
         <div className="col-md-6 mb-4 mb-md-0">
           <div className="card shadow-sm border-0">
             <img
-              src={image}
+              src={image} 
               alt="About Us"
+              width={"100%"}
               className="card-img-top rounded"
             />
           </div>
