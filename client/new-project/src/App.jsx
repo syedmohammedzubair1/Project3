@@ -1,16 +1,25 @@
 import React from "react";
+import Navbar from "./components/Navbar"; 
 import About from "./components/Footer/About";
-import Navbar from './components/Navbar';
-import RegistrationForm from './components/Login/RegistrationForm';
-import Contact from './components/Footer/Contact';
-
+// import Contact from "./components/Footer/Contact";
+import Footer from "./components/Footer/Footer";
+import RegistrationForm from "./components/Login/RegistrationForm";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min"
 const App = () => {
     return (
         <div>
-            <About />
-            <Contact/>
-            {/* hello */}
-            {/* Your other content here */}
+            {/* Navigation Bar */}
+            <Navbar /> 
+
+            {/* Main Content */}
+          
+                <About />
+                
+          
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 };
