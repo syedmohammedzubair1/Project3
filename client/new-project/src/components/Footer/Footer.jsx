@@ -8,7 +8,6 @@ const Footer = () => {
     <footer className="bg-dark text-white py-4">
       <div className="container-fluid w-100">
         <div className="row">
-          {/* Footer Column 1: Company Info */}
           <div className="col-md-4 mb-3">
             <h5>Company Name</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis quam a nunc vehicula, non ullamcorper orci auctor.</p>
@@ -43,4 +42,4 @@ const Footer = () => {
   );
 }
 
-export default Footer;
+export default Footer;
