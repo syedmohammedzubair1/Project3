@@ -3,6 +3,7 @@ import LoginForm from './Login/LoginForm'
 import { Routes,Route } from 'react-router-dom'
 import RegistrationForm from './Login/RegistrationForm'
 import Home from './Home'
+import About from './Footer/About'
 const Routing = () => {
   return (
     <div>
@@ -10,10 +11,10 @@ const Routing = () => {
           <Route path='/'element={<Home/>}/>
           <Route path="/login" element={<LoginForm/>}/>
           <Route path='/signup'element={<RegistrationForm/>}/>
-
+          <Route path='/about'element={<About/>}/>
         </Routes>
     </div>
   )
 }
 
-export default Routing
+export default Routing;
