@@ -5,9 +5,13 @@ import Home from './components/Home';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import VideosCards from "./components/TrendingVideos";
+import LandingPage from "./components/LandingPage";
+
+import VideosCards from "./components/VideosCards";
 
 import LoginForm from "./components/Login/LoginForm";
 import Routing from "./components/Routing";
+
 
 const App = () => {
   useEffect(() => {
@@ -21,8 +25,11 @@ const App = () => {
         <Navbar />
       </header>
 
+  
+
       <Routing/>
       <Footer />
+    
     </div>
   );
 };
