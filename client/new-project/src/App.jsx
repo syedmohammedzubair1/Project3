@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Home from './components/Home'; // Import the Home component
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
+import LandingPage from "./components/LandingPage";
 
 const App = () => {
   useEffect(() => {
@@ -17,12 +18,13 @@ const App = () => {
       <header>
         <Navbar />
       </header>
-
+      <LandingPage />
       {/* Home Section */}
       <Home /> {/* This will include Carousel and About */}
 
       {/* Footer Section */}
       <Footer />
+    
     </div>
   );
 };
