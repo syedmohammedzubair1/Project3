@@ -4,6 +4,8 @@ import About from './Footer/About';
 import TrendingVideos from './TrendingVideos';
 import LikedVideos from './LikedVideos';
 import LandingPage from './LandingPage';
+import Contact from './Contact';
+import FAQ from './FAQ';
 
 const Home = () => {
   useEffect(() => {
@@ -16,22 +18,20 @@ const Home = () => {
       <section>
         <LandingPage/>
       </section>
-      <section>
-        <LandingPage/>
-      </section>
+    <div> 
       <section>
         <TrendingVideos/>
       </section>
       <section>
         <LikedVideos/>
       </section>
-      <section className="my-5">
-        <Carousel />
-      </section>
-
+     
+      <FAQ/>
       <section className="my-5">
         <About />
       </section>
+      <Contact/>
+    </div>
     </div>
   );
 };

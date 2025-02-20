@@ -43,7 +43,7 @@ const Footer = () => {
                 <p><NavLink to="/youtube" className="text-dark fw-bold text-decoration-none">YouTube</NavLink></p>
                 <p><NavLink to="/facebook" className="text-dark fw-bold text-decoration-none">Facebook</NavLink></p>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </footer>
@@ -57,4 +57,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer;
