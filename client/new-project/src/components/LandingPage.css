@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Hides unwanted horizontal scroll */
+  /* overflow-x: hidden; Hides unwanted horizontal scroll */
 }
 /* Ensure images fit within their containers */
 .article-card img {
@@ -14,7 +14,8 @@ body {
 
 /* Prevent horizontal scrolling */
 body, html {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  display: contents;
 }
 @media (max-width: 768px) {
   .article-card img {

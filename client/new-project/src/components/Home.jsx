@@ -4,6 +4,7 @@ import About from './Footer/About';
 import TrendingVideos from './TrendingVideos';
 import LikedVideos from './LikedVideos';
 import LandingPage from './LandingPage';
+import Contact from './Contact';
 
 const Home = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const Home = () => {
       <section className="my-5">
         <About />
       </section>
+      <Contact/>
     </div>
   );
 };
