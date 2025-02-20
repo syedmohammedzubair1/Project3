@@ -51,7 +51,6 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="container-fluid bg-black text-white text-center py-3">
         &copy; 2025 by NicheFlare.
-        <NavLink to="/wix" className="text-white fw-bold text-decoration-none">Wix</NavLink>
       </div>
     </>
   );
