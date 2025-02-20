@@ -3,6 +3,7 @@ import Carousel from './Carousel';
 import About from './Footer/About';
 import TrendingVideos from './TrendingVideos';
 import LikedVideos from './LikedVideos';
+import LandingPage from './LandingPage';
 
 const Home = () => {
   useEffect(() => {
@@ -11,7 +12,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div> 
+    <div>
+      <section>
+        <LandingPage/>
+      </section>
       <section>
         <TrendingVideos/>
       </section>
