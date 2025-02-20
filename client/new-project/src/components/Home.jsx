@@ -17,6 +17,9 @@ const Home = () => {
         <LandingPage/>
       </section>
       <section>
+        <LandingPage/>
+      </section>
+      <section>
         <TrendingVideos/>
       </section>
       <section>
