@@ -12,7 +12,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div> 
+    <div>
+      <section>
+        <LandingPage/>
+      </section>
       <section>
         <LandingPage/>
       </section>

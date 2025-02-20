@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LandingPage.css";
+import { motion } from "framer-motion";
+
 
 const articles = [
   { id: 1, title: "Understanding AI in Education", tags: "EDUCATION", description: "Exploring the role of AI in modern education.", image: "https://alcorfund.com/wp-content/uploads/2020/09/Technical-Innovation.png", likes: 120 },
@@ -69,14 +71,34 @@ const LandingPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="hero-section">
-        <div className="hero-overlay"></div>
-        <div className="hero-content text-center">
-          <h1 className="display-4 fw-bold">Enhance Your Skills</h1>
-          <p className="lead">Access high-quality content, guides, and courses to excel in your career.</p>
-          <button className="btn btn-warning">Explore Courses</button>
-        </div>
-      </div>
+      <motion.div
+      className="hero-section"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <div className="hero-overlay"></div>
+      <motion.div
+        className="hero-content text-center"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <h1 className="display-4 fw-bold">Enhance Your Skills</h1>
+        <p className="lead">
+          Access high-quality content, guides, and courses to excel in your
+          career.
+        </p>
+        <motion.button
+          className="btn btn-warning"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Explore Courses
+        </motion.button>
+      </motion.div>
+    </motion.div>
+  
 
       {/* Trending Articles Section */}
       <div className="container mt-5">

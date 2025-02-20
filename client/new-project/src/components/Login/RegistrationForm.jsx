@@ -25,7 +25,7 @@ const RegistrationForm = () => {
 
     return (
         <div className="container my-5 d-flex justify-content-center">
-            <div className="card p-4 shadow" style={{ width: '400px' }}>
+            <div className="card p-4 shadow mt-5" style={{ width: '400px' }}>
                 <h2 className="text-center">Register</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
