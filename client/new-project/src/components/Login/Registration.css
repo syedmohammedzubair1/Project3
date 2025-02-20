@@ -1,7 +1,7 @@
-/* Basic styling for the registration form */
+/* 
 body {
-    background-color: #f4f6f9; /* Light gray background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background-color: #f4f6f9; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0;
 
     padding: 0;
@@ -12,7 +12,6 @@ body {
   }
   .form-container {
     width : 500px;
-    /* max-width: 400px !important; */
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -70,4 +69,4 @@ button.submit-btn:hover {
 }
 .EndSubmit {
 margin-bottom: 10px;
-}
+} */

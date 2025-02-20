@@ -9,13 +9,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      {/* Carousel Section */}
+    <div> 
       <section className="my-5">
         <Carousel />
       </section>
 
-      {/* About Section */}
       <section className="my-5">
         <About />
       </section>
