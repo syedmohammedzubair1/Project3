@@ -18,7 +18,7 @@
 } */
 
 body {
-    padding-top: 80px; /* Adjusted for fixed navbar */
+    padding-top: 60px; /* Adjusted for fixed navbar */
 }
 /* Add space between navbar items */
 .navbar-nav .nav-item {
@@ -28,6 +28,7 @@ body {
 /* Add space between the links and Login button */
 .navbar-nav .nav-item:last-child {
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 /* Style for navbar links */
@@ -37,7 +38,7 @@ body {
 
 /* Hover effect on nav links */
 .navbar-nav .nav-link:hover {
-    color: #ff8c00; /* Orange color on hover */
+    color:  rgba(255, 193, 7, 1); /* Orange color on hover */
     transform: scale(1.1); /* Slightly increase size on hover */
 }
 
@@ -49,14 +50,14 @@ body {
 
 /* Hover effect on Login button */
 .navbar-nav .btn:hover {
-    background-color: #ff8c00; /* Change background color on hover */
+    background-color:  rgba(255, 193, 7, 1); /* Change background color on hover */
     transform: scale(1.05); /* Slightly increase size on hover */
     color: white; /* Change text color */
 }
 
 /* Active link style */
 .navbar-nav .nav-link.active {
-    color: #ff8c00; /* Active link color */
+    color: rgba(255, 193, 7, 1); /* Active link color */
     font-weight: bold; /* Make active link bold */
 }
 
@@ -71,6 +72,7 @@ body {
 
 /* Hover effect for Company Name */
 .navbar-brand:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color:  rgb(240, 181, 4); /* Darker blue on hover */
     color: white; /* Ensure text remains white on hover */
 }
+

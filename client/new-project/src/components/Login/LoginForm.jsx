@@ -31,7 +31,7 @@ const LoginForm = ({ onSubmit }) => {
 
   return (
     <div className="container my-5 d-flex justify-content-center">
-      <div className="card shadow p-4" style={{ width: "400px" }}>
+      <div className="card shadow p-4 mt-5" style={{ width: "400px" }}>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h2 className="mb-0">Login</h2>
           <button

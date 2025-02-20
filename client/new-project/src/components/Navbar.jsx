@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState("home");
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const handleLinkClick = (link) => {
         setActiveLink(link);
     };
@@ -15,7 +15,17 @@ const Navbar = () => {
             {/* Navbar Section */}
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" to="/">Company Name</NavLink>
+                    <NavLink
+                        className="navbar-brand"
+                        to="/"
+                        onClick={() => {
+                            handleLinkClick("home");
+                            window.scrollTo(0, 0); // Scroll to top
+                        }}
+                    >
+                        NICHE-FLARE
+                    </NavLink>
+
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -48,7 +58,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <button className="btn btn-light"onClick={()=>navigate(`/login`)}>Login</button>
+                                <button className="btn btn-light" onClick={() => navigate(`/login`)}>Login</button>
                             </li>
                         </ul>
                     </div>
