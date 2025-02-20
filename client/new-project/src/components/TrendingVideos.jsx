@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const videos = [
@@ -134,20 +135,23 @@ const VideosCard = () => {
       <div className="row">
         {currentVideos.map((video, index) => (
           <div key={index} className="col-md-4 mb-4">
-            <div className="card shadow-sm">
-              <div className="card-body">
-                <div className="embed-responsive embed-responsive-16by9">
+            <div className="card shadow-lg" style={{ height: '100%', border: '3px solid #ccc', transform: 'scale(1)', transition: 'transform 0.3s' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}>
+              <div className="card-body d-flex flex-column">
+                <div className="embed-responsive embed-responsive-16by9" style={{ overflow: 'hidden' }}>
                   <iframe
                     className="embed-responsive-item w-100"
                     src={video.videoUrl}
                     title={video.title}
+                    style={{ transform: 'scale(1)', transition: 'transform 0.3s' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
                     allowFullScreen
                   ></iframe>
                 </div>
                 <h5 className="card-title mt-3">{video.title}</h5>
                 <h6 className="text-muted">{video.category}</h6>
                 <p className="card-text">{video.description}</p>
-                <a href={video.videoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary w-100">
+                <a href={video.videoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-auto">
                   Watch on YouTube
                 </a>
               </div>

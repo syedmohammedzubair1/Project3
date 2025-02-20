@@ -7,7 +7,7 @@ const Footer = () => {
 
 
     <>
-      <footer className="container-fluid bg-warning text-black p-5">
+      <footer className="container-fluid bg-warning text-black py-5 mt-5">
         <div className="container-fluid w-100">
           <div className="row">
             <div className="col-md-4">

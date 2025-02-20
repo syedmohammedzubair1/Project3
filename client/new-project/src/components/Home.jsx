@@ -13,10 +13,12 @@ const Home = () => {
   }, []);
 
   return (
+    <div>
+      <section>
+        <LandingPage/>
+      </section>
     <div> 
-      <div className='me-0'>
-      <LandingPage/>
-      </div>
+     
       <section>
         <TrendingVideos/>
       </section>
@@ -31,6 +33,7 @@ const Home = () => {
         <About />
       </section>
       <Contact/>
+    </div>
     </div>
   );
 };
