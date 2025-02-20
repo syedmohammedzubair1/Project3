@@ -1,28 +1,17 @@
-import React, { useEffect } from "react";
-import Navbar from './components/Navbar';
-import Footer from "./components/Footer/Footer";
-import Home from './components/Home'; // Import the Home component
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
+import React from "react";
+
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import LandingPage from "./components/LandingPage";
+import FAQ from "./components/FAQ";
 
-const App = () => {
-  useEffect(() => {
-    // Scroll to the top whenever the component is rendered or updated
-    window.scrollTo(0, 0);
-  }, []); // Empty dependency array means it runs only once when the component is mounted
-
+function App() {
   return (
     <div>
-      {/* Navbar Section */}
-      <header>
-        <Navbar />
-      </header>
-   
-      <Footer />
-    
+  
+   <LandingPage />
+   <FAQ />
     </div>
   );
-};
+}
 
 export default App;
