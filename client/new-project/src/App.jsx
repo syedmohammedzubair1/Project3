@@ -12,16 +12,16 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-  
+    <div className="App">
+{/*   
       <header>
         <Navbar />
       </header>
 
       <Routing/>
     
-      <Footer />
-      
+      <Footer /> */}
+    
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react'
 import LoginForm from './Login/LoginForm'
-import { Routes,Route, Outlet } from 'react-router-dom'
+import { Routes,Route } from 'react-router-dom'
 import RegistrationForm from './Login/RegistrationForm'
 import Home from './Home'
 import About from './Footer/About'
