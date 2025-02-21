@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from "./components/Footer/Footer";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
+import Carousel2 from "./components/Carousel2";
 
 import Routing from "./components/Routing";
 
@@ -12,16 +13,16 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-  
+    <div className="App">
+{/*   
       <header>
         <Navbar />
       </header>
 
       <Routing/>
     
-      <Footer />
-      
+      <Footer /> */}
+    
     </div>
   );
 };
