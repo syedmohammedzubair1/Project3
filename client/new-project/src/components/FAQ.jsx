@@ -56,11 +56,13 @@ const FAQ = () => {
       <h2 className="mb-5 text-center">Frequently Asked Questions</h2>
       <div className="accordion" id="faqAccordion">
         {faqData.map((item, index) => (
-          <div className="accordion-item" key={index}>
+          <div className="accordion-item border border-solid border-3 border-dark my-3 rounded-2" key={index}>
             <h2 className="accordion-header" id={`heading-${index}`}>
               <button
-                className="accordion-button collapsed"
+                className="accordion-button collapsed p-4  fw-bolder"
                 type="button"
+
+                
                 data-bs-toggle="collapse"
                 data-bs-target={`#collapse-${index}`}
                 aria-expanded="false"

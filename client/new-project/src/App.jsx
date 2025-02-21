@@ -13,14 +13,14 @@ const App = () => {
 
   return (
     <div className="App">
-{/*   
+  
       <header>
         <Navbar />
       </header>
 
       <Routing/>
     
-      <Footer /> */}
+      <Footer />
     
     </div>
   );

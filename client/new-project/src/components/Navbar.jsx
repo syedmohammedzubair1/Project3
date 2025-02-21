@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <div>
-            {/* Navbar Section */}
+           
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container-fluid">
                     <NavLink
