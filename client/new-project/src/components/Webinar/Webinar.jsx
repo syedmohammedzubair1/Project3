@@ -123,7 +123,7 @@ export const Webinar = () => {
 
   useEffect(() => {
     filterData();
-  }, [searchText, isLatest]); // Runs whenever searchText or isLatest changes
+  }, [searchText, isLatest]); 
 
   const inputHandler = (e) => {
     setSearchText(e.target.value);

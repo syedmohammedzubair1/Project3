@@ -1,4 +1,4 @@
-/* Ensure the body has proper spacing to accommodate the fixed search bar */
+
 body {
     background-color: white;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     text-align: center;
   }
   
-  /* Search Bar Container */
+
   .search-container {
     position: sticky;
     top: 0;
@@ -16,7 +16,7 @@ body {
     z-index: 1000;
   }
   
-  /* Search Input */
+
   .search-input {
     width: 50%;
     padding: 10px;
@@ -25,7 +25,7 @@ body {
     border-radius: 5px;
   }
   
-  /* Buttons */
+
   button {
     margin-left: 10px;
     padding: 10px 15px;
@@ -40,7 +40,7 @@ body {
     background-color: #0056b3;
   }
   
-  /* Container for video cards */
+
   .card-container {
     margin-top: 20px;
     display: flex;
@@ -50,7 +50,7 @@ body {
     padding: 20px;
   }
   
-  /* Video Cards */
+
   .video-card {
     width: 300px;
     border: 1px solid #ddd;
@@ -62,14 +62,13 @@ body {
   .video-card:hover {
     transform: scale(1.05);
   }
-  
-  /* Video Thumbnail */
+
   .card-img {
     width: 100%;
     height: auto;
   }
   
-  /* Card Content */
+
   .card-body {
     padding: 10px;
   }
