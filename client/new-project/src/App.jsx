@@ -1,13 +1,24 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
+import { Webinar } from './components/Webinar/Webinar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HomeWebinar } from './components/Webinar/HomeWebinar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             {/* Your other content here */}
-            <Carousel/>
+            {/* <Carousel/> */}
+            {/* <HomeWebinar/> */}
+            {/* <Webinar/> */}
+
+            <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomeWebinar />} />
+                <Route path="/webinar" element={<Webinar />} />
+            </Routes>
+            </BrowserRouter>
         </div>
     );
 };
