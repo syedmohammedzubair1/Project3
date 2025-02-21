@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
-import './Navbar.css'; // Optional custom styling
-import { NavLink, useNavigate } from 'react-router-dom';
+import React from "react";
+import { useCart } from "../context/CartContext";
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const [activeLink, setActiveLink] = useState("home");
-    const navigate = useNavigate();
-    const handleLinkClick = (link) => {
-        setActiveLink(link);
-    };
+  const { cart } = useCart();
 
     return (
         <div>

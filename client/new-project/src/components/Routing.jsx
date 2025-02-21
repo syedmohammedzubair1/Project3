@@ -7,6 +7,8 @@ import About from './Footer/About'
 import Contact from './Contact'
 import ContentDetail from './ContentDetail'
 import ContentList from './ContentList'
+import VideoDetail from './VideoDetail';
+import LikedVideoDetail from './LikedVideoDetail';
 import SubscribePanel from '../Pages/SubscribePanel'
 import WildCard from '../Pages/WildCard'
 const Routing = () => {
@@ -20,10 +22,16 @@ const Routing = () => {
           <Route path='/contact'element={<Contact/>}/>
           <Route path="/content" element={<ContentList/>} /> 
           <Route path="/content/:id" element={<ContentDetail/>} /> 
+
+          <Route path="/video/:id" element={<VideoDetail />} />
+          <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+
+
           <Route path='/subscribe'element={<SubscribePanel/>}>
           
           </Route>
           <Route path='*'element={<WildCard/>}/>
+
         </Routes>
     </div>
   )
