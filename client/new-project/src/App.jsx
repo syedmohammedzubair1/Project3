@@ -6,6 +6,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 
 import Routing from "./components/Routing";
 
+
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,13 +15,17 @@ const App = () => {
   return (
     <div>
   
-      <header>
+      {/* <header>
         <Navbar />
       </header>
 
-      <Routing/>
     
-      <Footer />
+    
+      <Footer /> */}
+      {/* <Profile/> */}
+      {/* <ProfileForm/> */}
+      <Routing/>
+      {/* <Home/> */}
       
     </div>
   );
