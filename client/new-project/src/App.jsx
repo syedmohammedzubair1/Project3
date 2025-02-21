@@ -7,11 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 const App = () => {
     return (
         <div>
-            {/* <Navbar /> */}
-            {/* Your other content here */}
-            {/* <Carousel/> */}
-            {/* <HomeWebinar/> */}
-            {/* <Webinar/> */}
+        
 
             <BrowserRouter>
             <Routes>
