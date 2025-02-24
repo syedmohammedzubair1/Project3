@@ -54,7 +54,7 @@ function PhotoContent() {
             />
           ) : (
             <img
-              src="https://via.placeholder.com/100?text=User"
+              src="https://www.pngkey.com/png/detail/22-223848_businessman-vector-person-logo-png.png"
               alt="Default Icon"
               className="img-fluid"
             />

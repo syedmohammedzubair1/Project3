@@ -27,14 +27,13 @@ const Routing = () => {
           <Route path="/content" element={<ContentList/>} /> 
           <Route path="/content/:id" element={<ContentDetail/>} /> 
           <Route path='/profile' element={<Sidebar/>}>
-    <Route index element={<ProfileContent />} /> {/* Default content */}
-    <Route path='AccountSettings' element={<AccountSettingsContent />} />
-    <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
-    <Route path='Photo' element={<PhotoContent />} />
-    <Route path='ProfileContent' element={<ProfileContent />} />
-    <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
-    <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
-    <Route path='logout' element={<LogoutContent />} />
+              <Route path='AccountSettings' element={<AccountSettingsContent />} />
+              <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
+              <Route path='Photo' element={<PhotoContent />} />
+              <Route path='ProfileContent' element={<ProfileContent />} />
+              <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
+              <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
+              <Route path='logout' element={<LogoutContent />} />
 </Route>
 
         </Routes>
