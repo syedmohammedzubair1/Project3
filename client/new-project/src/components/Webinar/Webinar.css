@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
 /* Ensure the body has proper spacing to accommodate the fixed search bar */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
 body {
     background-color: white;
     margin: 0;
@@ -10,11 +14,15 @@ body {
     text-align: center;
   }
   
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   /* Search Bar Container */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   .search-container {
     position: sticky;
     top: 0;
@@ -24,11 +32,15 @@ body {
     z-index: 1000;
   }
   
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   /* Search Input */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   .search-input {
     width: 50%;
     padding: 10px;
@@ -37,11 +49,15 @@ body {
     border-radius: 5px;
   }
   
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   /* Buttons */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   button {
     margin-left: 10px;
     padding: 10px 15px;
@@ -56,11 +72,15 @@ body {
     background-color: #0056b3;
   }
   
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   /* Container for video cards */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   .card-container {
     margin-top: 20px;
     display: flex;
@@ -70,11 +90,15 @@ body {
     padding: 20px;
   }
   
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   /* Video Cards */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   .video-card {
     width: 300px;
     border: 1px solid #ddd;
@@ -86,22 +110,30 @@ body {
   .video-card:hover {
     transform: scale(1.05);
   }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   
   /* Video Thumbnail */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   .card-img {
     width: 100%;
     height: auto;
   }
   
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
   /* Card Content */
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
   .card-body {
     padding: 10px;
   }
@@ -119,4 +151,7 @@ body {
     font-size: 12px;
     display: inline-block;
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948

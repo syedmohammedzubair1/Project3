@@ -1,0 +1,57 @@
+{
+    "users": [
+      {
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "password": "password123",
+        "role": "subscriber",
+        "isVerified": true,
+        "subscription": {
+          "plan": "monthly",
+          "startDate": "2025-02-01T00:00:00.000Z",
+          "endDate": "2025-03-01T00:00:00.000Z",
+          "status": "active"
+        },
+        "billingHistory": [
+          {
+            "transactionId": "txn001",
+            "amount": 10,
+            "paymentMethod": "credit_card",
+            "status": "successful",
+            "date": "2025-02-01T10:00:00.000Z"
+          }
+        ],
+        "twoFactorAuth": {
+          "enabled": false,
+          "secret": null
+        }
+      },
+      {
+        "name": "Jane Smith",
+        "email": "janesmith@example.com",
+        "password": "password456",
+        "role": "contentCurator",
+        "isVerified": true,
+        "subscription": {
+          "plan": "annual",
+          "startDate": "2024-01-01T00:00:00.000Z",
+          "endDate": "2025-01-01T00:00:00.000Z",
+          "status": "active"
+        },
+        "billingHistory": [
+          {
+            "transactionId": "txn002",
+            "amount": 100,
+            "paymentMethod": "paypal",
+            "status": "successful",
+            "date": "2024-01-01T10:00:00.000Z"
+          }
+        ],
+        "twoFactorAuth": {
+          "enabled": true,
+          "secret": "some-secret"
+        }
+      }
+    ]
+  }
+  
