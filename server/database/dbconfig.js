@@ -1,2 +1,7 @@
 import mongoose from "mongoose";
-mongoose.connect(``)
+
+const mongooseConnect=async()=>{
+    mongoose.connect(process.env.MONGODB_URL)
+    console.log("mongoose connected")
+}
+module.exports=mongooseConnect
