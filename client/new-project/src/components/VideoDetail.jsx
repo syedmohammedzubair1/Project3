@@ -180,7 +180,7 @@ const videos = [
       <div className="container mt-5">
         <div className="row g-4">
           {/* Left Section - Description */}
-          <div className="col-md-6 mt-5">
+          <div className="col-md-6 mt-5"><br /><br /><br /><br /><br />
             <h2 className="mb-3">{video.title}</h2>
             <h4 className="fw-semibold">What You Will Learn</h4>
             <ul className="list-group list-group-flush">
@@ -191,7 +191,7 @@ const videos = [
           </div>
   
           {/* Right Section - Video & Price */}
-          <div className="col-md-6 text-center mt-5">
+          <div className="col-md-6 text-center mt-5"><br />
             <div className="border rounded shadow p-3 bg-light">
               <iframe
                 className="w-100 rounded"
