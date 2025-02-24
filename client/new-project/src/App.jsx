@@ -9,12 +9,13 @@ const App = () => {
         <div>
         
 
-            <BrowserRouter>
+            {/* <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomeWebinar />} />
                 <Route path="/webinar" element={<Webinar />} />
             </Routes>
-            </BrowserRouter>
+            </BrowserRouter> */}
+            <h2>welcome</h2>
         </div>
     );
 };
