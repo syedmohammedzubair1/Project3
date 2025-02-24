@@ -9,6 +9,7 @@ import ContentDetail from './ContentDetail'
 import ContentList from './ContentList'
 import VideoDetail from './VideoDetail';
 import LikedVideoDetail from './LikedVideoDetail';
+import VideoUpload from './VideoUpload'
 
 const Routing = () => {
   return (
@@ -23,6 +24,9 @@ const Routing = () => {
           <Route path="/content/:id" element={<ContentDetail/>} /> 
           <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+          <Route path="/upload" element={<VideoUpload type="trending" />} />
+          <Route path="/upload-liked" element={<VideoUpload type="liked" />} />
+
 
         </Routes>
     </div>
