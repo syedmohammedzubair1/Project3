@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+
+
 import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
@@ -66,7 +68,7 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/cart">
+                            <NavLink className="nav-link" to="/purchase">
                                 <FaShoppingCart />
                                 {cart.length > 0 && (
                                     <span className="badge bg-danger ms-1">{cart.length}</span>
