@@ -17,11 +17,27 @@ import CartPage from "./pages/CartPage";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+
+const App = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
    {/* <div>
   
+
+      {/* <header>
+        <Navbar />
+      </header>
+
+    
+    
+      <Footer /> */}
+      {/* <Profile/> */}
+      {/* <ProfileForm/> */}
+      <Routing/>
+      {/* <Home/> */}
 
     <div className="App">
 {/*   
