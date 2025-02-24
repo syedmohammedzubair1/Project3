@@ -3,9 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./LandingPage.css";
-import { motion } from "framer-motion";
-
+import "./LandingPage1.css";
 
 const articles = [
   { id: 1, title: "Understanding AI in Education", tags: "EDUCATION", description: "Exploring the role of AI in modern education.", image: "https://alcorfund.com/wp-content/uploads/2020/09/Technical-Innovation.png", likes: 120 },
@@ -31,29 +29,17 @@ const articles = [
 
 ];
 
-const CustomPrevArrow = (props) => {
-  const { onClick } = props;
-  return <button className="slick-prev" onClick={onClick}>❮</button>;
-};
-
-const CustomNextArrow = (props) => {
-  const { onClick } = props;
-  return <button className="slick-next" onClick={onClick}>❯</button>;
-};
+const CustomPrevArrow = ({ onClick }) => <button className="slick-prev" onClick={onClick}>❮</button>;
+const CustomNextArrow = ({ onClick }) => <button className="slick-next" onClick={onClick}>❯</button>;
 
 const LandingPage = () => {
-  const [filteredtags, setFilteredtags] = useState("ALL");
+  const [filteredTags, setFilteredTags] = useState("ALL");
 
-  // Filter articles by tags
-  const filteredArticles =
-    filteredtags === "ALL"
-      ? articles
-      : articles.filter((article) => article.tags === filteredtags);
+  const allTags = ["ALL", ...new Set(articles.map(article => article.tags))];
 
-  // Sort articles by likes (most liked first)
+  const filteredArticles = filteredTags === "ALL" ? articles : articles.filter(article => article.tags === filteredTags);
   const likedArticles = [...articles].sort((a, b) => b.likes - a.likes);
 
-  // Slider settings
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -70,64 +56,42 @@ const LandingPage = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <motion.div
-      className="hero-section"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-    >
-      <div className="hero-overlay"></div>
-      <motion.div
-        className="hero-content text-center"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <h1 className="display-4 fw-bold">Enhance Your Skills</h1>
-        <p className="lead">
-          Access high-quality content, guides, and courses to excel in your
-          career.
-        </p>
-        <motion.button
-          className="btn btn-warning"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Explore Courses
-        </motion.button>
-      </motion.div>
-    </motion.div>
-  
+      {/* Filter Section */}
+      <div className="container text-center my-4">
+        <h4>Filter by Tags</h4>
+        {allTags.map((tag) => (
+          <button
+            key={tag}
+            className={`btn mx-2 ${filteredTags === tag ? "btn-primary" : "btn-outline-primary"}`}
+            onClick={() => setFilteredTags(tag)}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
 
       {/* Trending Articles Section */}
       <div className="container mt-5">
         <h2 className="text-start mb-4">Trending Articles</h2>
-
-        {/* Filter Buttons */}
-        <div className="d-flex flex-wrap gap-2 mb-4">
-          {["ALL", "EDUCATION", "ENTERTAINMENT", "NEWS", "HEALTH"].map((tags) => (
-           <button
-           key={tags}
-           className={`btn ${filteredtags === tags ? "btn-primary" : "btn-outline-primary"}`}
-           onClick={() => setFilteredtags(tags)}
-         >
-           {tags}
-         </button>
-         
-          ))}
-        </div>
-
-        {/* Slider for Trending Articles */}
         <Slider {...sliderSettings} className="d-flex align-items-center">
           {filteredArticles.map((article) => (
             <div key={article.id} className="d-flex justify-content-center px-2">
-              <div className="card p-3 shadow-sm text-center d-flex flex-column align-items-center article-card" style={{ width: '100%' }}>
+              <div className="card p-3 shadow-sm text-center article-card" style={{ width: '100%' }}>
                 <img src={article.image} alt={article.title} className="img-fluid mb-3" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                 <h5 className="card-title">{article.title}</h5>
                 <span className="badge bg-info">{article.tags}</span>
                 <p className="mt-2 text-center">{article.description}</p>
                 <span className="text-muted">Likes: {article.likes}</span>
+
+                <div className="d-flex justify-content-between">
+                    <div className="mx-5 ">
+                    <button className="btn btn-primary mt-2 buy-now-btn">Buy Now</button>
+                    </div>
+                    <div className="mx-5">
+                    <button className="btn btn-success mt-2 add-now-btn">AddToCart</button>
+                    </div>
+                </div>
+        
               </div>
             </div>
           ))}
@@ -140,12 +104,22 @@ const LandingPage = () => {
         <Slider {...sliderSettings} className="d-flex align-items-center">
           {likedArticles.slice(0, 5).map((article) => (
             <div key={article.id} className="d-flex justify-content-center px-2">
-              <div className="card p-3 shadow-sm text-center d-flex flex-column align-items-center article-card" style={{ width: '100%' }}>
+              <div className="card p-3 shadow-sm text-center article-card" style={{ width: '100%' }}>
                 <img src={article.image} alt={article.title} className="img-fluid mb-3" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                 <h5 className="card-title">{article.title}</h5>
                 <span className="badge bg-info">{article.tags}</span>
                 <p className="mt-2 text-center">{article.description}</p>
                 <span className="text-muted">Likes: {article.likes}</span>
+
+                <div className="d-flex justify-content-between">
+                <div className="mx-5">
+                    <button className="btn btn-primary mt-2 buy-now-btn">Buy Now</button>
+                </div>
+                <div className="mx-5">
+                <button className="btn btn-success mt-2 add-now-btn">Add to Cart</button>
+            </div>
+            </div>
+
               </div>
             </div>
           ))}
@@ -155,4 +129,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage; 
+export default LandingPage;

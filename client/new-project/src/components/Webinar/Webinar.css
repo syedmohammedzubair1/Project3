@@ -1,0 +1,157 @@
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+/* Ensure the body has proper spacing to accommodate the fixed search bar */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Search Bar Container */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .search-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Search Input */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .search-input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Buttons */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Container for video cards */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .card-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Video Cards */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .video-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+  }
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  
+  /* Video Thumbnail */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Card Content */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-tags .tag {
+    background-color: #f1f1f1;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+  }
+<<<<<<< HEAD
+  
+=======
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
