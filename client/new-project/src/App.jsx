@@ -6,6 +6,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import Carousel2 from "./components/Carousel2";
 
 import Routing from "./components/Routing";
+import Carousel from "./components/Carousel";
 
 const App = () => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const App = () => {
       <Routing/>
     
       <Footer /> */}
-    
+      <Carousel2/>
     </div>
   );
 };
