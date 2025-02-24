@@ -6,7 +6,7 @@ function Subscriptions() {
   const [activePlans, setActivePlans] = useState([]);
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5">
       <h2 className="fw-bold">Subscriptions</h2>
       <p>Manage your subscriptions</p>
 

@@ -1,4 +1,4 @@
-import LandingPage from "./LandingPage";
+import LandingPage1 from "./LandingPage1";
 import LikedVideos from "./LikedVideos";
 import VideosCard from "./TrendingVideos";
 
@@ -7,7 +7,7 @@ const SubscribePanel = () => {
     <>
       <div>
         <section>
-          <LandingPage />
+          <LandingPage1/>
         </section>
         <section>
           <VideosCard />

@@ -25,7 +25,7 @@ function PhotoContent() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5">
       <h2 className="h4 text-center fs-1">Photo</h2>
       <p className="text-center text-muted">
         Add a nice photo of yourself for your profile.

@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div className="container-fluid">
+            <div className="container-fluid" style={{zIndex:1000}}>
                 <NavLink
                     className="navbar-brand"
                     to="/"
