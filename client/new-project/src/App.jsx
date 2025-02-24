@@ -1,38 +1,41 @@
+// import React from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import ContentList from "./components/ContentList";
+// import ContentDetail from "./components/ContentDetail";
+// import LandingPage from "./components/LandingPage";
 
-import React, { useEffect } from "react";
-import Navbar from './components/Navbar';
-import Footer from "./components/Footer/Footer";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
-import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
-import Routing from "./components/Routing";
+// function App() {
+//   return (
+//     <>
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<ContentList />} />  {/* Home page shows all articles */}
+//         <Route path="/content/:id" element={<ContentDetail />} />  {/* Detailed view */}
+//       </Routes>
+//     </Router>
+//    <LandingPage />
+//     </>
+//   );
+// }
+
 // export default App;
-import { CartProvider } from "./context/CartContext";
+
+import React from "react";
+
+// import { CartProvider } from "./context/CartContext";
 // import ItemList from "./pages/ItemList";
 // import { ItemList } from "./pages/ItemList";  // ✅ Correct way for named export
 // import { ItemList } from "./data/ItemList";
 
 // import CartPage from "./pages/CartPage";
 // import Navbar from "./components/Navbar";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { HomeWebinar } from "./components/Webinar/HomeWebinar";
-import { Webinar } from "./components/Webinar/Webinar";
-import { Purchase } from "./components/Purchase/Purchase";
+
 
 function App() {
   return (
-
-    <div className="App">
-{/*   
-      <header>
-        <Navbar />
-      </header>
-
-      <Routing/>
-    
-      <Footer /> */}
-    
-    </div>
+<>
+<div>
+  </div></>
   );
 }
 
