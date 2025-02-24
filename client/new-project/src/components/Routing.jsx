@@ -28,7 +28,7 @@ const Routing = () => {
 
 
           <Route path='/subscribe'element={<SubscribePanel/>}>
-          
+            
           </Route>
           <Route path='*'element={<WildCard/>}/>
 
