@@ -15,6 +15,10 @@ import ProfileContent from './ProfileComponents/ProfileContent'
 import PurchaseHistoryContent from './ProfileComponents/PurchaseHistoryContent'
 import SubscriptionsContent from './ProfileComponents/SubscriptionsContent'
 import LogoutContent from './ProfileComponents/LogoutContent'
+import VideoDetail from './VideoDetail';
+import LikedVideoDetail from './LikedVideoDetail';
+import SubscribePanel from '../Pages/SubscribePanel'
+import WildCard from '../Pages/WildCard'
 const Routing = () => {
   return (
     <div>
@@ -36,6 +40,15 @@ const Routing = () => {
     <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
     <Route path='logout' element={<LogoutContent />} />
 </Route>
+
+          <Route path="/video/:id" element={<VideoDetail />} />
+          <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+
+
+          <Route path='/subscribe'element={<SubscribePanel/>}>
+          
+          </Route>
+          <Route path='*'element={<WildCard/>}/>
 
         </Routes>
     </div>
