@@ -1,11 +1,15 @@
 import React, { useEffect } from "react";
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer/Footer";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Routing from "./components/Routing";
-
+import SubscribePanel from "./components/SubscribePanel";
+import { CartProvider } from "./context/CartContext";
+import { HomeWebinar } from "./components/Webinar/HomeWebinar";
+import { Webinar } from "./components/Webinar/Webinar";
+import { Purchase } from "./components/Purchase/Purchase";
 
 const App = () => {
   useEffect(() => {
@@ -13,22 +17,18 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-  
-      {/* <header>
+    <div className="App">
+      <header>
         <Navbar />
       </header>
 
-    
-    
-      <Footer /> */}
-      {/* <Profile/> */}
-      {/* <ProfileForm/> */}
-      <Routing/>
-      {/* <Home/> */}
-      
+      <Routing />
+
+      <Footer />
+
+
     </div>
   );
 };
-  
+
 export default App;

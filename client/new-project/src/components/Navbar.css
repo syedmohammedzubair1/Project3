@@ -16,10 +16,10 @@
     flex-direction: column;
     gap: 1rem;
 } */
-
+/* 
 body {
-    padding-top: 60px; /* Adjusted for fixed navbar */
-}
+    padding-top: 60px; 
+} */
 /* Add space between navbar items */
 .navbar-nav .nav-item {
     margin-right: 20px; /* Space between Home, About, Contact links */
