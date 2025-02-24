@@ -7,7 +7,7 @@ const Footer = () => {
 
 
     <>
-      <footer className="container-fluid bg-warning text-black py-5 mt-5">
+      <footer className="container-fluid bg-warning text-black py-5 ">
         <div className="container-fluid w-100">
           <div className="row">
             <div className="col-md-4">
@@ -15,8 +15,8 @@ const Footer = () => {
               <p>500 Terry Francine Street</p>
               <p>San Francisco, CA 94158</p>
               <p><strong>General Inquiries:</strong> 123-456-7890</p>
-              <p><strong>Sales:</strong> info@mysite.com</p>
-              <p><strong>Customer Care:</strong> info@mysite.com</p>
+              <p><strong>Sales:</strong> info@Nicheflare.com</p>
+              <p><strong>Customer Care:</strong> support@Nicheflare.com</p>
             </div>
 
 
@@ -28,21 +28,27 @@ const Footer = () => {
 
             {/* Right Section - Follow & Subscribe */}
             <div className="col-md-4">
-              <h5 className="fw-bold">Follow</h5>
-              <p>Sign up to get the latest news on our product.</p>
-              <input type="email" className="form-control border-dark mb-2" placeholder="Email *" />
-              <div className="form-check">
-                <input type="checkbox" className="form-check-input" id="subscribe" />
-                <label className="form-check-label" htmlFor="subscribe">
-                  Yes, subscribe me to your newsletter.
-                </label>
-              </div>
-              <button className="btn btn-dark w-100 mt-2 fw-bold">Subscribe</button>
-              <div className="mt-3">
-                <p><NavLink to="/linkedin" className="text-dark fw-bold text-decoration-none">LinkedIn</NavLink></p>
-                <p><NavLink to="/youtube" className="text-dark fw-bold text-decoration-none">YouTube</NavLink></p>
-                <p><NavLink to="/facebook" className="text-dark fw-bold text-decoration-none">Facebook</NavLink></p>
-              </div>
+            
+              
+                <h1 className="ms-5 mb-5 display-6 fw-bold"> Get us on </h1>
+              <div className="mt-3 d-flex ">
+  <p className="display-6 mx-3 ms-5">
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-dark fw-bold text-decoration-none">
+    <i className="bi bi-linkedin"></i>
+    </a>
+  </p>
+  <p className="display-6 mx-3 ms-5">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-dark fw-bold text-decoration-none">
+    <i className="bi bi-youtube"></i>
+    </a>
+  </p>
+  <p className="display-6 mx-3 ms-5">
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-dark fw-bold text-decoration-none">
+    <i className="bi bi-facebook"></i>
+    </a>
+  </p>
+</div>
+
             </div> 
           </div>
         </div>

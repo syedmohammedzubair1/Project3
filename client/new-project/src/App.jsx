@@ -1,28 +1,13 @@
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import ContentList from "./components/ContentList";
-// import ContentDetail from "./components/ContentDetail";
-// import LandingPage from "./components/LandingPage";
 
-// function App() {
-//   return (
-//     <>
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<ContentList />} />  {/* Home page shows all articles */}
-//         <Route path="/content/:id" element={<ContentDetail />} />  {/* Detailed view */}
-//       </Routes>
-//     </Router>
-//    <LandingPage />
-//     </>
-//   );
-// }
-
+import React, { useEffect } from "react";
+import Navbar from './components/Navbar';
+import Footer from "./components/Footer/Footer";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+import Routing from "./components/Routing";
 // export default App;
-
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
-// import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./context/CartContext";
 // import ItemList from "./pages/ItemList";
 // import { ItemList } from "./pages/ItemList";  // ✅ Correct way for named export
 // import { ItemList } from "./data/ItemList";
@@ -36,26 +21,18 @@ import { Purchase } from "./components/Purchase/Purchase";
 
 function App() {
   return (
-    // <CartProvider>
-    //   <Router>
-    //     <Navbar />
-    //     <div className="container mt-4">
-    //       <Routes>
-    //         <Route path="/" element={<ItemList />} />
-    //         <Route path="/cart" element={<CartPage />} />
-    //       </Routes>
-    //     </div>
-    //   </Router>
-    // </CartProvider>
-    <>
-    <Purchase/>
-    <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<HomeWebinar/>} />
-        <Route path="/webinar" element={<Webinar />} />
-    </Routes>
-    </BrowserRouter>
-    </>
+
+    <div className="App">
+{/*   
+      <header>
+        <Navbar />
+      </header>
+
+      <Routing/>
+    
+      <Footer /> */}
+    
+    </div>
   );
 }
 
