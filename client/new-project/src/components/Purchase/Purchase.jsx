@@ -32,7 +32,7 @@ export const Purchase = () => {
     };
 
     return (
-        <div className="purchase-container">
+        <div className="purchase-container mt-5"><br />
             <h2 className="purchase-title">Purchase History</h2>
             <div className="purchase-menu">
                 <h4 className="purchase-option" onClick={clickHandler1}>Courses</h4>

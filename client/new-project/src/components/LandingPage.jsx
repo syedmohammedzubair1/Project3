@@ -107,13 +107,14 @@ const LandingPage = () => {
         {/* Filter Buttons */}
         <div className="d-flex flex-wrap gap-2 mb-4">
           {["ALL", "EDUCATION", "ENTERTAINMENT", "NEWS", "HEALTH"].map((tags) => (
-            <button
-              key={tags}
-              className={`btn ${filteredtags === tags ? "btn-primary" : "btn-outline-primary"}`}
-              onClick={() => setFilteredtags(tags)}
-            >
-              {tags}
-            </button>
+           <button
+           key={tags}
+           className={`btn ${filteredtags === tags ? "btn-primary" : "btn-outline-primary"}`}
+           onClick={() => setFilteredtags(tags)}
+         >
+           {tags}
+         </button>
+         
           ))}
         </div>
 
@@ -154,7 +155,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
-
-
-
+export default LandingPage; 
