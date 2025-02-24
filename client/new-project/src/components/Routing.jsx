@@ -17,10 +17,15 @@ import SubscriptionsContent from './ProfileComponents/SubscriptionsContent'
 import LogoutContent from './ProfileComponents/LogoutContent'
 import VideoDetail from './VideoDetail';
 import LikedVideoDetail from './LikedVideoDetail';
+<<<<<<< HEAD
+import VideoUpload from './VideoUpload'
+
+=======
 import SubscribePanel from '../Pages/SubscribePanel'
 import WildCard from '../Pages/WildCard'
 import { Webinar } from './Webinar/Webinar'
 import { Purchase } from './Purchase/Purchase'
+>>>>>>> be1b32f84399704e2d7379320db4288d8d9de829
 const Routing = () => {
   return (
     <div>
@@ -36,6 +41,9 @@ const Routing = () => {
 
           <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+          <Route path="/upload" element={<VideoUpload type="trending" />} />
+          <Route path="/upload-liked" element={<VideoUpload type="liked" />} />
+
 
           <Route path="/webinar" element={<Webinar/>} />
           <Route path="/purchase" element={<Purchase/>} />

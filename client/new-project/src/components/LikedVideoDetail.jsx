@@ -118,7 +118,7 @@ const LikedVideoDetail = () => {
   }
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5"><br /><br />
       <h2 className="text-center mb-4">{video.title}</h2>
 
       <div className="row shadow-lg p-4 rounded">
