@@ -155,7 +155,7 @@ export const Webinar = () => {
 
   return (
     <>
-      <div className="search-container" >
+      <div className="search-container mt-5" ><br />
         <input
           type="text"
           onChange={inputHandler}
@@ -183,7 +183,7 @@ export const Webinar = () => {
                     </span>
                   ))}
                 </Card.Text>
-                <Card.Text>{k.status}</Card.Text>
+                {/* <Card.Text>{k.status}</Card.Text> */}
               </Card.Body>
             </Card>
           ))

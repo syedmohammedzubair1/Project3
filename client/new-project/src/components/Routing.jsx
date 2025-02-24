@@ -19,6 +19,8 @@ import VideoDetail from './VideoDetail';
 import LikedVideoDetail from './LikedVideoDetail';
 import SubscribePanel from '../Pages/SubscribePanel'
 import WildCard from '../Pages/WildCard'
+import { Webinar } from './Webinar/Webinar'
+import { Purchase } from './Purchase/Purchase'
 const Routing = () => {
   return (
     <div>
@@ -30,24 +32,26 @@ const Routing = () => {
           <Route path='/contact'element={<Contact/>}/>
           <Route path="/content" element={<ContentList/>} /> 
           <Route path="/content/:id" element={<ContentDetail/>} /> 
-          <Route path='/profile' element={<Sidebar/>}>
-    <Route index element={<ProfileContent />} /> {/* Default content */}
-    <Route path='AccountSettings' element={<AccountSettingsContent />} />
-    <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
-    <Route path='Photo' element={<PhotoContent />} />
-    <Route path='ProfileContent' element={<ProfileContent />} />
-    <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
-    <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
-    <Route path='logout' element={<LogoutContent />} />
-</Route>
+  
 
           <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
 
+          <Route path="/webinar" element={<Webinar/>} />
+          <Route path="/purchase" element={<Purchase/>} />
 
-          <Route path='/subscribe'element={<SubscribePanel/>}>
-          
+        <Route path='/subscribe'element={<SubscribePanel/>}>
+        <Route path='/profile' element={<Sidebar/>}>
+            <Route index element={<ProfileContent />} /> 
+            <Route path='AccountSettings' element={<AccountSettingsContent />} />
+            <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
+            <Route path='Photo' element={<PhotoContent />} />
+            <Route path='ProfileContent' element={<ProfileContent />} />
+            <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
+            <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
+            <Route path='logout' element={<LogoutContent />} />
           </Route>
+        </Route>
           <Route path='*'element={<WildCard/>}/>
 
         </Routes>
