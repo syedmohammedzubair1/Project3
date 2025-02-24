@@ -41,7 +41,7 @@ const Routing = () => {
           <Route path="/purchase" element={<Purchase/>} />
 
         <Route path='/subscribe'element={<SubscribePanel/>}>
-        <Route path='/profile' element={<Sidebar/>}>
+        <Route path='profile' element={<Sidebar/>}>
             <Route index element={<ProfileContent />} /> 
             <Route path='AccountSettings' element={<AccountSettingsContent />} />
             <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
