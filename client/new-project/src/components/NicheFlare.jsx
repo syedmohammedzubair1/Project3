@@ -1,4 +1,8 @@
 
+import React, { useState } from "react";
+import { IoCartOutline, IoHeartOutline, IoPersonOutline } from "react-icons/io5";
+import { NavLink, useNavigate } from "react-router-dom";
+
 import React from "react";
 import { IoCartOutline, IoHeartOutline, IoPersonOutline } from "react-icons/io5";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -37,11 +41,10 @@ const NicheFlare = ({ totalItems }) => {
               </button>
             </form>
           </div>
-
-
           <div className="icons ms-auto d-flex align-items-center">
-            {/* ❤️ Navigate to Cart when clicking Heart Icon */}
-            <button className="btn btn-outline-light me-2" onClick={() => navigate("/cart")}>
+            <button className="btn btn-outline-light me-2" onClick={() => navigate("/liked-videos")}>
+
+
               <IoHeartOutline size={24} />
             </button>
 

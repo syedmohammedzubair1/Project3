@@ -26,10 +26,16 @@ import WildCard from '../Pages/WildCard';
 import { Webinar } from './Webinar/Webinar';
 import { Purchase } from './Purchase/Purchase';
 import { Outlet } from 'react-router-dom';
+
+
+import NicheFlare from "./NicheFlare";
+import LikedVideos from "./LikedVideos";
+
 import VideoUpload from './VideoUpload'
 import ProfileContent from './ProfileComponents/ProfileContent';
 import PhotoContent from './ProfileComponents/PhotoContent';
 import CartPage from '../pages/CartPage';
+
 
 
 const ProfileLayout = () => {
@@ -57,11 +63,23 @@ const Routing = () => {
         <Route path="/content/:id" element={<ContentDetail />} />
         <Route path="/video/:id" element={<VideoDetail />} />
         <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+        <Route path="upload" element={<VideoUpload type="trending" />} />
+        <Route path="upload-liked" element={<VideoUpload type="liked" />} />
 
-        {/* Subscribe Panel Routes */}
+        
+        <Route path="/" element={<NicheFlare />} />
+        <Route path="/liked-videos" element={<LikedVideos />} />
+
+        {/* Subscribe Panel Route */}
         <Route path='/subscribe' element={<SubscribePanel />} />
         <Route path="/subscribe/webinar" element={<Webinar />} />
         <Route path="/subscribe/purchase" element={<Purchase />} />
+        
+
+        {/* Profile Routes Nested Correctly */}
+
+        {/* Subscribe Panel Routes */}
+        
 
         {/* 🛒 Cart Route */}
         <Route path="/cart" element={<CartPage />} /> {/* ✅ New Cart Route */}
@@ -77,19 +95,17 @@ const Routing = () => {
           <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
           <Route path='Subscriptions' element={<SubscriptionsContent />} />
           <Route path='logout' element={<LogoutContent />} />
-          </Route>
-          <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+   </Route>
+          <Route path="video/:id" element={<VideoDetail />} />
+          <Route path="liked-videos/:id" element={<LikedVideoDetail />} />
+          <Route path="upload" element={<VideoUpload type="trending" />} />
+          <Route path="upload-liked" element={<VideoUpload type="liked" />} />
+          <Route path="webinar" element={<Webinar/>} />
+          <Route path="purchase" element={<Purchase/>} />
+     
           
 
 
-
-        {/* Video Upload Routes */}
-        <Route path="/upload" element={<VideoUpload type="trending" />} />
-        <Route path="/upload-liked" element={<VideoUpload type="liked" />} />
-
-        {/* Webinar & Purchase */}
-        <Route path="/webinar" element={<Webinar />} />
-        <Route path="/purchase" element={<Purchase />} />
 
         {/* Catch-All (Wildcard) Route */}
         <Route path='*' element={<WildCard />} />

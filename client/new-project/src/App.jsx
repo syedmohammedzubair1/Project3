@@ -6,12 +6,8 @@ import Footer from "./components/Footer/Footer";
 // import "bootstrap-icons/font/bootstrap-icons.css";
 import { useLocation } from "react-router-dom";
 import NicheFlare from "./components/NicheFlare";
-import SubscribePanel from "./components/SubscribePanel";
-import { CartProvider } from "./context/CartContext";
-import { HomeWebinar } from "./components/Webinar/HomeWebinar";
-import { Webinar } from "./components/Webinar/Webinar";
-import { Purchase } from "./components/Purchase/Purchase";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import Carousel2 from "./components/Carousel2";
 
@@ -38,6 +34,8 @@ const App = () => {
 
       <Routing />
       {!isSubscribePanel && <Footer />}
+
+
 
      
     </div>

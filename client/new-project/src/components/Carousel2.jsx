@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Carousel } from 'react-responsive-carousel';
 // requires a loader
 import './ContentCarousel.css';
