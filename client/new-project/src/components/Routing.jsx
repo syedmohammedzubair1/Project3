@@ -69,11 +69,13 @@ import About from './Footer/About';
 import Contact from './Contact';
 import ContentDetail from './ContentDetail';
 import ContentList from './ContentList';
-import Sidebar from './ProfileComponents/Sidebar';
+// import Sidebar from './ProfileComponents/Sidebar';
+import Sidebar from "../components/ProfileComponents/Sidebar"
 import AccountSettingsContent from './ProfileComponents/AccountSettingsContent';
 import PaymentMethodsContent from './ProfileComponents/PaymentMethodsContent';
-import PhotoContent from './ProfileComponents/PhotoContent';
-import ProfileContent from './ProfileComponents/ProfileContent';
+// import PhotoContent from './ProfileComponents/PhotoContent';
+// import ProfileContent from './ProfileComponents/ProfileContent';
+
 import PurchaseHistoryContent from './ProfileComponents/PurchaseHistoryContent';
 import SubscriptionsContent from './ProfileComponents/SubscriptionsContent';
 import LogoutContent from './ProfileComponents/LogoutContent';
@@ -85,9 +87,8 @@ import { Webinar } from './Webinar/Webinar';
 import { Purchase } from './Purchase/Purchase';
 import { Outlet } from 'react-router-dom';
 import VideoUpload from './VideoUpload'
-import WildCard from '../Pages/WildCard'
-import { Webinar } from './Webinar/Webinar'
-import { Purchase } from './Purchase/Purchase'
+import ProfileContent from './ProfileComponents/ProfileContent';
+import PhotoContent from './ProfileComponents/PhotoContent';
 
 const ProfileLayout = () => {
   return (
@@ -132,14 +133,15 @@ const Routing = () => {
         {/* Profile Routes Nested Correctly */}
         <Route path='/subscribe/profile' element={<Sidebar />}>
           <Route index element={<ProfileContent />} />
+          <Route path='profile' element={<ProfileContent />} />
           <Route path='AccountSettings' element={<AccountSettingsContent />} />
-          <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
+          <Route path='PaymentMethods' element={<PaymentMethodsContent />} />
           <Route path='Photo' element={<PhotoContent />} />
           <Route path='ProfileContent' element={<ProfileContent />} />
           <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
-          <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
+          <Route path='Subscriptions' element={<SubscriptionsContent />} />
           <Route path='logout' element={<LogoutContent />} />
-          <Route path="/video/:id" element={<VideoDetail />} />
+          </Route>
           <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
           <Route path="/upload" element={<VideoUpload type="trending" />} />
           <Route path="/upload-liked" element={<VideoUpload type="liked" />} />
@@ -147,7 +149,6 @@ const Routing = () => {
           <Route path="/purchase" element={<Purchase/>} />
 
        
-        </Route>
 
         <Route path='*' element={<WildCard />} />
       </Routes>
