@@ -241,7 +241,7 @@ const VideoDetail = () => {
     fetchVideo();
   }, [id]);
 
-  if (!video) return <h2>Loading...</h2>;
+  if (!video) return<h2 className="mt-5">Loading...</h2>;
 
   return (
     <div className="container">
