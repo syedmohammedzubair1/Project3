@@ -19,7 +19,7 @@ import VideoDetail from './VideoDetail';
 import LikedVideoDetail from './LikedVideoDetail';
 import SubscribePanel from '../Pages/SubscribePanel'
 import WildCard from '../Pages/WildCard'
-import { Webinar } from './Webinar/Webinar'
+// import { Webinar } from './Webinar/Webinar'
 import { Purchase } from './Purchase/Purchase'
 const Routing = () => {
   return (
@@ -41,7 +41,7 @@ const Routing = () => {
           <Route path="/purchase" element={<Purchase/>} />
 
         <Route path='/subscribe'element={<SubscribePanel/>}>
-        <Route path='/profile' element={<Sidebar/>}>
+        <Route path='profile' element={<Sidebar/>}>
             <Route index element={<ProfileContent />} /> 
             <Route path='AccountSettings' element={<AccountSettingsContent />} />
             <Route path='PaymentMethod' element={<PaymentMethodsContent />} />
