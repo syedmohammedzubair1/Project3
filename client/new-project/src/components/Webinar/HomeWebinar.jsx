@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import "./HomeWebinar.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const dummyData1 = [
@@ -8,6 +10,10 @@ export const dummyData1 = [
     title: "Mastering React: Live Q&A Session",
     body: "Join us for a live Q&A session with React experts. Get your questions answered in real time!",
     publish_date: "2025-02-25T14:00:00Z",
+    type: "video",
+    author_id: "65d47b2c9c1e4f001a2b5001",
+    tags: ["React", "Webinar", "Live", "Frontend"],
+    status: "published",
     video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     image_url: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
   },
@@ -15,6 +21,10 @@ export const dummyData1 = [
     title: "Building Scalable Web Apps with Node.js",
     body: "Learn how to build high-performance and scalable web applications using Node.js.",
     publish_date: "2025-03-05T16:30:00Z",
+    type: "video",
+    author_id: "65d47b2c9c1e4f001a2b5002",
+    tags: ["Node.js", "Webinar", "Backend"],
+    status: "published",
     video_url: "https://www.youtube.com/watch?v=Oe421EPjeBE",
     image_url: "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
   },
@@ -25,6 +35,25 @@ export const dummyData1 = [
     video_url: "https://www.youtube.com/watch?v=9KJxaFHotqI",
     image_url: "https://img.youtube.com/vi/9KJxaFHotqI/maxresdefault.jpg",
   },
+    type: "video",
+    author_id: "65d47b2c9c1e4f001a2b5003",
+    publish_date: "2025-03-12T18:00:00Z",
+    tags: ["React", "Redux", "Context API", "Webinar"],
+    status: "published",
+    video_url: "https://www.youtube.com/watch?v=9KJxaFHotqI",
+    image_url: "https://img.youtube.com/vi/9KJxaFHotqI/maxresdefault.jpg",
+  },
+  {
+    title: "Advanced JavaScript Concepts Explained",
+    body: "An in-depth session covering closures, prototypes, and async programming in JavaScript.",
+    type: "video",
+    author_id: "65d47b2c9c1e4f001a2b5004",
+    publish_date: "2025-03-20T15:00:00Z",
+    tags: ["JavaScript", "Advanced", "Webinar"],
+    status: "published",
+    video_url: "https://www.youtube.com/watch?v=B7wHpNUUT4Y",
+    image_url: "https://img.youtube.com/vi/B7wHpNUUT4Y/maxresdefault.jpg",
+  }
 ];
 
 export const HomeWebinar = () => {
