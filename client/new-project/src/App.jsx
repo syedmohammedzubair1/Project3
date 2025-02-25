@@ -22,8 +22,8 @@ import Navbar from "./components/Navbar.jsx";
 // import { HomeWebinar } from './components/Webinar/HomeWebinar';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const App = () => {
 
+const App = () => {
   const location = useLocation();
   const isSubscribePanel = location.pathname.startsWith("/subscribe");
 
@@ -33,20 +33,15 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <header>
-        <Navbar />
-      </header> */}
-        {/* Show NicheFlare navbar for Subscribe Panel, otherwise show the default Navbar */}
-      {isSubscribePanel ? <NicheFlare/> : <header><Navbar /></header>}
+
+      {isSubscribePanel ? <NicheFlare /> : <header><Navbar /></header>}
 
       <Routing />
-
-      {/* Hide Footer on Subscribe Panel */}
       {!isSubscribePanel && <Footer />}
-            {/* <h2>welcome</h2> */}
-        </div>
-    );
 
+     
+    </div>
+  );
 };
 
 export default App;

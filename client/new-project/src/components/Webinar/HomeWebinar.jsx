@@ -2,6 +2,9 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import "./HomeWebinar.css";
 import { Link } from "react-router-dom";
+=======
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export const dummyData1 = [
   {
     title: "Mastering React: Live Q&A Session",
@@ -11,7 +14,6 @@ export const dummyData1 = [
     publish_date: "2025-02-25T14:00:00Z",
     tags: ["React", "Webinar", "Live", "Frontend"],
     status: "published",
-    publish_date: "2025-02-25T14:00:00Z",
     video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     image_url: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
   },
@@ -23,7 +25,7 @@ export const dummyData1 = [
     publish_date: "2025-03-05T16:30:00Z",
     tags: ["Node.js", "Webinar", "Backend"],
     status: "published",
-    publish_date: "2025-03-05T16:30:00Z",
+
     video_url: "https://www.youtube.com/watch?v=Oe421EPjeBE",
     image_url: "https://img.youtube.com/vi/Oe421EPjeBE/maxresdefault.jpg",
   },
@@ -48,12 +50,7 @@ export const dummyData1 = [
     status: "published",
     video_url: "https://www.youtube.com/watch?v=B7wHpNUUT4Y",
     image_url: "https://img.youtube.com/vi/B7wHpNUUT4Y/maxresdefault.jpg",
-  },
-  {
-    publish_date: "2025-03-12T18:00:00Z",
-    video_url: "https://www.youtube.com/watch?v=9KJxaFHotqI",
-    image_url: "https://img.youtube.com/vi/9KJxaFHotqI/maxresdefault.jpg",
-  },
+  }
 ];
 
 export const HomeWebinar = () => {
