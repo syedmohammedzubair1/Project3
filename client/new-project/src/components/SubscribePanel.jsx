@@ -1,6 +1,9 @@
+
 import LandingPage1 from "./LandingPage1";
+
 import LikedVideos from "./LikedVideos";
 import VideosCard from "./TrendingVideos";
+import { Outlet } from "react-router-dom";  // Import Outlet
 
 const SubscribePanel = () => {
   return (
@@ -10,13 +13,18 @@ const SubscribePanel = () => {
           <LandingPage1/>
         </section>
         <section>
+
           <VideosCard />
         </section>
         <section>
-            <LikedVideos/>
+          <LikedVideos />
         </section>
+        
+        {/* This ensures that the nested routes (like /subscribe/profile) get rendered here */}
+        <Outlet />
       </div>
     </>
   );
 };
+
 export default SubscribePanel;

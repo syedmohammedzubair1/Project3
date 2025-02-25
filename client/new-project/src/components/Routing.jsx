@@ -84,6 +84,10 @@ import WildCard from '../Pages/WildCard';
 import { Webinar } from './Webinar/Webinar';
 import { Purchase } from './Purchase/Purchase';
 import { Outlet } from 'react-router-dom';
+import VideoUpload from './VideoUpload'
+import WildCard from '../Pages/WildCard'
+import { Webinar } from './Webinar/Webinar'
+import { Purchase } from './Purchase/Purchase'
 
 const ProfileLayout = () => {
   return (
@@ -95,6 +99,7 @@ const ProfileLayout = () => {
     </div>
   );
 };
+
 
 
 
@@ -123,6 +128,7 @@ const Routing = () => {
         <Route path="/subscribe/webinar" element={<Webinar />} />
         <Route path="/subscribe/purchase" element={<Purchase />} />
 
+
         {/* Profile Routes Nested Correctly */}
         <Route path='/subscribe/profile' element={<Sidebar />}>
           <Route index element={<ProfileContent />} />
@@ -133,6 +139,14 @@ const Routing = () => {
           <Route path='PurchaseHistory' element={<PurchaseHistoryContent />} />
           <Route path='SubscriptionsContent' element={<SubscriptionsContent />} />
           <Route path='logout' element={<LogoutContent />} />
+          <Route path="/video/:id" element={<VideoDetail />} />
+          <Route path="/liked-videos/:id" element={<LikedVideoDetail />} />
+          <Route path="/upload" element={<VideoUpload type="trending" />} />
+          <Route path="/upload-liked" element={<VideoUpload type="liked" />} />
+          <Route path="/webinar" element={<Webinar/>} />
+          <Route path="/purchase" element={<Purchase/>} />
+
+       
         </Route>
 
         <Route path='*' element={<WildCard />} />

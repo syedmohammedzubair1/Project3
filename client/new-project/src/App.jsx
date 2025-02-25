@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar';
 import Footer from "./components/Footer/Footer";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -12,6 +12,17 @@ import { CartProvider } from "./context/CartContext";
 import { HomeWebinar } from "./components/Webinar/HomeWebinar";
 import { Webinar } from "./components/Webinar/Webinar";
 import { Purchase } from "./components/Purchase/Purchase";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
+import Carousel2 from "./components/Carousel2";
+
+import Routing from "./components/Routing";
+import Carousel from "./components/Carousel";
+import React from 'react';
+// import { Webinar } from './components/Webinar/Webinar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { HomeWebinar } from './components/Webinar/HomeWebinar';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
 
@@ -34,10 +45,10 @@ const App = () => {
 
       {/* Hide Footer on Subscribe Panel */}
       {!isSubscribePanel && <Footer />}
+            <h2>welcome</h2>
+        </div>
+    );
 
-
-    </div>
-  );
 };
 
 export default App;
