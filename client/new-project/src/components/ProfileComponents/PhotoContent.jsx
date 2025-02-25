@@ -25,7 +25,7 @@ function PhotoContent() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5">
       <h2 className="h4 text-center fs-1">Photo</h2>
       <p className="text-center text-muted">
         Add a nice photo of yourself for your profile.
@@ -54,7 +54,7 @@ function PhotoContent() {
             />
           ) : (
             <img
-              src="https://via.placeholder.com/100?text=User"
+              src="https://www.pngkey.com/png/detail/22-223848_businessman-vector-person-logo-png.png"
               alt="Default Icon"
               className="img-fluid"
             />

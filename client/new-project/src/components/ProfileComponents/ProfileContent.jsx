@@ -22,7 +22,7 @@ function ProfileContent() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5">
       <h2 className="h4 text-center fs-1">Profile</h2>
       <p className="text-center text-muted">
         Add information about yourself.
@@ -45,7 +45,7 @@ function ProfileContent() {
         </div>
 
         {/* Last Name */}
-        <div className="mb-0 p-2">
+        <div className="mb-0 p-1">
           <label className="form-label fw-bold">Last Name</label>
           <input
             type="text"
@@ -59,7 +59,7 @@ function ProfileContent() {
         </div>
 
         {/* Email */}
-        <div className="mb-0 p-2">
+        <div className="mb-0 p-1">
           <label className="form-label fw-bold">Email</label>
           <input
             type="email"
@@ -73,7 +73,7 @@ function ProfileContent() {
         </div>
 
         {/* Phone Number */}
-        <div className="mb-0 p-2">
+        <div className="mb-0 p-1">
           <label className="form-label fw-bold">Phone Number</label>
           <input
             type="tel"
@@ -87,7 +87,7 @@ function ProfileContent() {
         </div>
 
         {/* Gender */}
-        <div className="mb-0 p-2">
+        <div className="mb-0 p-1">
           <label className="form-label fw-bold">Gender</label>
           <select
             className="form-select"
@@ -104,7 +104,7 @@ function ProfileContent() {
         </div>
 
         {/* Date of Birth */}
-        <div className="mb-0 p-2">
+        <div className="mb-0 p-1">
           <label className="form-label fw-bold">Date of Birth</label>
           <input
             type="date"
