@@ -1,128 +1,157 @@
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+/* Ensure the body has proper spacing to accommodate the fixed search bar */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
 body {
-  background-color: white;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-.search-container {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.search-input {
-  width: 50%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  margin-left: 10px;
-  padding: 10px 15px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-@media screen and (max-width: 400px) {
-  button {
-    height: 50px;
-    width: 50px;
-    font-size: small;
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
   }
-}
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
 
-button:hover {
-  background-color: #0056b3;
-}
+=======
+  /* Search Bar Container */
+>>>>>>> Stashed changes
+=======
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .search-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
 
-.video-card {
-  width: 300px;
-  height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  background: white;
-  margin: 0;
-  padding: 0;
-}
-.video-card:hover {
-  transform: scale(1.05);
-}
+=======
+  /* Search Input */
+>>>>>>> Stashed changes
+=======
 
-.card-img {
-  height: 180px;
-  object-fit: cover;
-  width: 100%;
-}
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .search-input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
 
-.card-body-fixed {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px;
-  width: 100%;
-}
+=======
+  /* Buttons */
+>>>>>>> Stashed changes
+=======
 
-.card-title {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-}
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
 
-.card-body-text {
-  font-size: 14px;
-  flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-align: center;
-}
+=======
+  /* Container for video cards */
+>>>>>>> Stashed changes
+=======
 
-.card-date {
-  font-size: 12px;
-  color: gray;
-  text-align: center;
-}
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .card-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
 
-.card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: center;
-  min-height: 30px;
-  align-items: center;
-}
+=======
+  /* Video Cards */
+>>>>>>> Stashed changes
+=======
 
-.tag {
-  background-color: #007bff;
-  color: white;
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 12px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-}
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .video-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+  }
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  
+  /* Video Thumbnail */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+
+=======
+  /* Card Content */
+>>>>>>> Stashed changes
+=======
+
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-tags .tag {
+    background-color: #f1f1f1;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+  }
+<<<<<<< HEAD
+  
+=======
+>>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
