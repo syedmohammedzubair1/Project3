@@ -32,7 +32,7 @@ const articles = [
 const CustomPrevArrow = ({ onClick }) => <button className="slick-prev" onClick={onClick}>❮</button>;
 const CustomNextArrow = ({ onClick }) => <button className="slick-next" onClick={onClick}>❯</button>;
 
-const LandingPage = () => {
+const LandingPage1 = () => {
   const [filteredTags, setFilteredTags] = useState("ALL");
 
   const allTags = ["ALL", ...new Set(articles.map(article => article.tags))];
@@ -123,10 +123,11 @@ const LandingPage = () => {
               </div>
             </div>
           ))}
+          
         </Slider>
       </div>
     </div>
   );
 };
 
-export default LandingPage;
+export default LandingPage1;

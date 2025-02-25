@@ -6,7 +6,7 @@ const contentData = [
     body: "Closures are functions that retain access to their scope...",
     type: "article",
     author_id: "65d4f1a7c2b9f31234567901",
-    publish_date: "2025-02-15T10:30:00Z",
+    publish_date: "2025-02-15T10:30:00Z", 
     tags: ["Education", "JavaScript", "Programming"],
     status: "published"
   },

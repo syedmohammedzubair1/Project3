@@ -12,7 +12,7 @@ function PurchaseHistoryContent() {
   const [activeTab, setActiveTab] = useState("Courses"); // Track active button
 
   return (
-    <div className="container mt-4 text-center">
+    <div className="container mt-5 text-center">
       {/* Heading */}
       <h2 className="h4 fw-bold fs-1">Purchase History</h2>
       <p className="text-muted">Your purchased courses</p>
