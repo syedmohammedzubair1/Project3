@@ -1,0 +1,42 @@
+.carousel-container {
+  position: relative;
+}
+
+.carousel-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 500px; /* Set the width to 500px */
+  height: 500px; /* Set the height to 500px */
+  object-fit: cover; /* Ensure the image covers the area without distorting */
+  filter: blur(5px); /* Apply blur effect by default */
+  transition: filter 0.5s ease;
+}
+
+.carousel-slide .overlay {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Position the text 10px from the left side */
+  transform: translateY(-50%);
+  color: white;
+  text-align: left; /* Align text to the left */
+  width: 40%; /* Set the width to 3/4th of the image width */
+  height: 300px; /* Set the height to half of the image height */
+  opacity: 1; /* Show text by default */
+  transition: opacity 0.5s ease;
+  background-color: rgba(132, 126, 126, 0.5); /* Add background color for better visibility */
+  padding: 20px;
+  border-radius: 10px;
+  pointer-events: none; /* Ensure text isn't clickable */
+  margin-left: 50px;
+}
+
+.carousel-slide:hover img {
+  filter: none; /* Remove blur effect on hover */
+}
+
+.carousel-slide:hover .overlay {
+  opacity: 0; /* Hide text on hover */
+}

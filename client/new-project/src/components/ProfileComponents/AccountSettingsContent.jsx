@@ -40,7 +40,7 @@ function AccountSettingsContent() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5">
       {/* Header */}
       <h2 className="h4 text-center fw-bold fs-1">Account</h2>
       <p className="text-center text-muted">
