@@ -7,7 +7,6 @@ import Carousel2 from "./components/Carousel2";
 
 import Routing from "./components/Routing";
 import Carousel from "./components/Carousel";
-import React from 'react';
 // import { Webinar } from './components/Webinar/Webinar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { HomeWebinar } from './components/Webinar/HomeWebinar';
@@ -16,23 +15,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
     return (
         <div>
-        
+        <header>
+            <Navbar/>
+        </header>
       <Routing/>
     
-      <Footer /> */}
-      <Carousel2/>
+      <Footer /> 
     </div>
   );
-
-            {/* <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<HomeWebinar />} />
-                <Route path="/webinar" element={<Webinar />} />
-            </Routes>
-            </BrowserRouter> */}
-            <h2>welcome</h2>
-        </div>
-    );
 
 };
 

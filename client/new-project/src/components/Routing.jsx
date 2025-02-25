@@ -17,15 +17,12 @@ import SubscriptionsContent from './ProfileComponents/SubscriptionsContent'
 import LogoutContent from './ProfileComponents/LogoutContent'
 import VideoDetail from './VideoDetail';
 import LikedVideoDetail from './LikedVideoDetail';
-<<<<<<< HEAD
-import VideoUpload from './VideoUpload'
-
-=======
 import SubscribePanel from '../Pages/SubscribePanel'
 import WildCard from '../Pages/WildCard'
 import { Webinar } from './Webinar/Webinar'
 import { Purchase } from './Purchase/Purchase'
->>>>>>> be1b32f84399704e2d7379320db4288d8d9de829
+import VideoUpload from './VideoUpload';
+
 const Routing = () => {
   return (
     <div>
