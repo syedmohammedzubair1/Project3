@@ -1,27 +1,4 @@
-// import React from "react";
-
-// import ItemCard from "../components/ItemCard";
-
-// const items = [
-//   { id: 1, name: "Article 1", price: 10 },
-//   { id: 2, name: "Video 1", price: 20 },
-//   { id: 3, name: "Webinar 1", price: 30 },
-// ];
-
-// export const ItemList = () => {
-//   return (
-//     <div className="container mt-4">
-//       <h2 className="text-center">Available Items</h2>
-//       <div className="row">
-//         {items.map((item) => (
-//           <div className="col-md-4" key={item.id}>
-//             <ItemCard item={item} />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };   
+  
 import React from "react";
 import ItemCard from "../components/ItemCard";
 

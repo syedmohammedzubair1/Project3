@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-.home-main{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-.home-button{
-    height: 40px;
-}
-=======
 .home-main {
     display: flex;
     gap: 20px;
     align-items: center;
   }
   .home-button {
-    height: 40px;
+   height: 40px;
   }
->>>>>>> bf6afc7c210f05397c123a37e784f80ae9204948
