@@ -1,5 +1,4 @@
 .home-main {
-<<<<<<< HEAD
   display: flex;
   gap: 20px;
   align-items: center;
@@ -29,12 +28,3 @@
   flex-grow: 1;
   min-height: 60px;
 }
-=======
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  .home-button {
-   height: 40px;
-  }
->>>>>>> 82ce77e620d138022c4f5a4fc772642eead856a7

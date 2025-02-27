@@ -1,63 +1,48 @@
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import "./Webinar.css";
+import { SearchContext } from "./SearchContext" // ✅ Import the context
 
-export const Webinar = ({input}) => {
+export const Webinar = () => {
   const [data, setData] = useState([]);
-  const [searchText, setSearchText] = useState(input || "");
   const [filteredData, setFilteredData] = useState([]);
-  // const [isLatest, setIsLatest] = useState(false);
-console.log(input,'st')
+  const { searchTerm } = useContext(SearchContext); // ✅ Use global search term
+
   useEffect(() => {
     fetchData();
   }, []);
 
   useEffect(() => {
     filterData();
-  }, [searchText,  data]);
-  useEffect(() => {
-    setSearchText(input || "");
-  }, [input]);
+  }, [searchTerm, data]);
 
   const fetchData = async () => {
     try {
       const response = await axios.get("http://localhost:4000/posts");
       setData(response.data);
-      setFilteredData(response.data);
+      setFilteredData(response.data); // ✅ Initially show all data
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
- 
-
   const filterData = () => {
-    let filtered = [...data];
-
-    // if (isLatest) {
-    //   const tenDaysAgo = new Date();
-    //   tenDaysAgo.setDate(tenDaysAgo.getDate() - 10);
-    //   filtered = filtered.filter(
-    //     (item) => new Date(item.publish_date) >= tenDaysAgo
-    //   );
-    // }
-
-    if (searchText) {
-      filtered = filtered .filter((item) =>
-        item.title.toLowerCase().includes(searchText.toLowerCase())
-      );
+    if (!searchTerm) {
+      setFilteredData(data); // ✅ Show all data if input is empty
+      return;
     }
+
+    const filtered = data.filter((item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     setFilteredData(filtered);
   };
 
   return (
-    <div className="main-div">  
-      <div className="search-container">
-      </div>
-
+    <div className="main-div">
       <div className="card-container">
         {filteredData.length > 0 ? (
           filteredData.map((k, index) => (

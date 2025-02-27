@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import Post from "./models/mongoSchema.js";
-
+import connectDB from "./database/dbconfig.js";
 dotenv.config();
-<<<<<<< HEAD
+connectDB()
 const app = express();
 
 app.use(express.json());
@@ -58,20 +58,4 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-=======
-connectDB();
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/uploads", express.static("uploads")); // Serve uploaded videos
-
-// Routes
-app.use("/api/trending-videos", trendingVideosRoutes);
-app.use("/api/liked-videos", likedVideosRoutes);
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-
-
->>>>>>> 82ce77e620d138022c4f5a4fc772642eead856a7
