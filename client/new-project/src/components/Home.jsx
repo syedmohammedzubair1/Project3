@@ -13,26 +13,26 @@ const Home = () => {
 
   return (
     <div>
+      
       <section>
-        <LandingPage/>
+        <LandingPage />
       </section>
-    <div> 
-    <section>
-        {/* <HomeWebinar/> */}
-      </section>
-      <section>
-        <TrendingVideos/>
-      </section>
-      <section>
-        <LikedVideos/>
-      </section>
-     
-     
-      <FAQ/>
-      <section className="my-5">
-        <About />
-      </section>
-    </div>
+      <div>
+        <section>
+          <HomeWebinar />
+        </section>
+        <section>
+          <TrendingVideos />
+        </section>
+        <section>
+          <LikedVideos />
+        </section>
+
+        <FAQ />
+        <section className="my-5">
+          <About />
+        </section>
+      </div>
     </div>
   );
 };

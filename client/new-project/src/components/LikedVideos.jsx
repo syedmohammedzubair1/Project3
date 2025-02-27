@@ -175,9 +175,12 @@
 import React, { useEffect, useState } from "react";
 import { getLikedVideos } from "../api";
 import { useNavigate } from "react-router-dom";
+import { Pagination } from "react-bootstrap";
 
 const LikedVideos = () => {
   const [videos, setVideos] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const videosPerPage = 3; // Only 3 videos per row
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -192,21 +195,84 @@ const LikedVideos = () => {
     fetchVideos();
   }, []);
 
+  // Pagination Logic
+  const totalPages = Math.ceil(videos.length / videosPerPage);
+  const indexOfLastVideo = currentPage * videosPerPage;
+  const indexOfFirstVideo = indexOfLastVideo - videosPerPage;
+  const currentVideos = videos.slice(indexOfFirstVideo, indexOfLastVideo);
+
+  const handlePageChange = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
-    <div className="container">
-      <h2>Liked Videos</h2>
-      <div className="row">
-        {videos.map((video) => (
-          <div key={video._id} className="col-md-4" onClick={() => navigate(`/video/${video._id}`)}>
-            <video src={`http://localhost:5000${video.videoUrl}`} width="100%" controls />
-            <h5>{video.title}</h5>
-            <p>{video.description}</p>
+    <div className="container mt-5"><br />
+      <h2 className="text-center mb-4 fw-bold text-danger">❤️ Liked Videos</h2>
+
+      <div className="row g-4">
+        {currentVideos.map((video) => (
+          <div key={video._id} className="col-md-4">
+            <div
+              className="card shadow-lg border-0 rounded-4 overflow-hidden"
+              onClick={() => navigate(`/video/${video._id}`)}
+              style={{ cursor: "pointer", transition: "transform 0.3s", minHeight: "400px" }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
+              <video className="card-img-top" src={`http://localhost:5000${video.videoUrl}`} controls />
+              <div className="card-body d-flex flex-column">
+                <h5 className="card-title text-dark fw-bold">{video.title}</h5>
+                <p className="card-text text-muted flex-grow-1">{video.description}</p>
+                <p className="mb-1"><strong>Category:</strong> {video.category}</p>
+                <div className="d-flex justify-content-between align-items-center">
+                  <span className="fw-bold text-success">💰 {video.price ? `$${video.price}` : "Free"}</span>
+                  {video.premium && <span className="badge bg-warning text-dark">⭐ Premium</span>}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="d-flex justify-content-center align-items-center mt-4">
+          <button
+            className="btn btn-outline-danger me-3"
+            disabled={currentPage === 1}
+            onClick={() => handlePageChange(currentPage - 1)}
+          >
+            &laquo; Previous
+          </button>
+
+          {[...Array(totalPages).keys()].slice(
+            Math.max(0, currentPage - 2),
+            Math.min(totalPages, currentPage + 1)
+          ).map((number) => (
+            <button
+              key={number + 1}
+              className={`btn mx-1 ${currentPage === number + 1 ? "btn-danger" : "btn-outline-danger"}`}
+              onClick={() => handlePageChange(number + 1)}
+            >
+              {number + 1}
+            </button>
+          ))}
+
+          <button
+            className="btn btn-outline-danger ms-3"
+            disabled={currentPage === totalPages}
+            onClick={() => handlePageChange(currentPage + 1)}
+          >
+            Next &raquo;
+          </button><br /><br /><br />
+        </div>
+      )}
     </div>
   );
 };
 
 export default LikedVideos;
+
 
