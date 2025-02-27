@@ -4,6 +4,8 @@ import LandingPage1 from "./LandingPage1";
 import LikedVideos from "./LikedVideos";
 import VideosCard from "./TrendingVideos";
 import { Outlet } from "react-router-dom";  // Import Outlet
+import { HomeWebinar } from "./Webinar/HomeWebinar";
+
 
 const SubscribePanel = () => {
   return (
@@ -15,6 +17,9 @@ const SubscribePanel = () => {
         <section>
 
           <VideosCard />
+        </section>
+        <section>
+        <HomeWebinar/>
         </section>
         <section>
           <LikedVideos />

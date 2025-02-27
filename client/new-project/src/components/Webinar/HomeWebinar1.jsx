@@ -6,7 +6,7 @@ import "./HomeWebinar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
-export const HomeWebinar = () => {
+export const HomeWebinar1 = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -38,14 +38,7 @@ export const HomeWebinar = () => {
                   <Card.Text className="text-secondary small">
                     {new Date(k.publish_date).toDateString()}
                   </Card.Text>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-around" }}
-                  >
-                    <button>Buy Now</button>
-                    <button style={{ backgroundColor: "#5d9150" }}>
-                      Add Cart
-                    </button>
-                  </div>
+                
                 </Card.Body>
               </Card>
             </div>

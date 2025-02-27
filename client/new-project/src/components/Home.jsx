@@ -5,6 +5,7 @@ import LikedVideos from './LikedVideos';
 import LandingPage from './LandingPage';
 import FAQ from './FAQ';
 import { HomeWebinar } from './Webinar/HomeWebinar';
+import { HomeWebinar1 } from './Webinar/HomeWebinar1';
 
 const Home = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Home = () => {
       </section>
       <div>
         <section>
-          <HomeWebinar />
+          <HomeWebinar1 />
         </section>
         <section>
           <TrendingVideos />

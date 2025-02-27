@@ -57,7 +57,7 @@ const LandingPage1 = () => {
   return (
     <div>
       {/* Filter Section */}
-      <div className="container text-center my-4">
+      <div className="container text-center my-6 " style={{marginTop:80}}>
         <h4>Filter by Tags</h4>
         {allTags.map((tag) => (
           <button

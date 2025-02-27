@@ -1,23 +1,61 @@
 import express from "express";
-import dotenv from "dotenv";
-import connectDB from "./database/dbConfig.js"; // ✅ Correct path
-import trendingVideosRoutes from "./routes/trendingVideosRoutes.js";
-import likedVideosRoutes from "./routes/likedVideosRoutes.js";
 import cors from "cors";
-
+import dotenv from "dotenv";
+import Post from "./models/mongoSchema.js";
+import connectDB from "./database/dbconfig.js";
 dotenv.config();
-connectDB();
-
+connectDB()
 const app = express();
-app.use(cors());
+
 app.use(express.json());
-app.use("/uploads", express.static("uploads")); // Serve uploaded videos
+app.use(cors());
 
-// Routes
-app.use("/api/trending-videos", trendingVideosRoutes);
-app.use("/api/liked-videos", likedVideosRoutes);
+app.get("/", (req, res) => {
+  res.send(`<h1>Hello Team</h1>`);
+});
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 
+app.post("/post", async (req, res) => {
+  try {
+    if (!Array.isArray(req.body)) {
+      return res.status(400).json({ message: "Request body must be an array" });
+    }
+
+    const newPosts = await Post.insertMany(req.body);
+    res.status(201).json({ message: "Data received", newPosts });
+  } catch (error) {
+    console.error("Error saving posts:", error.message);
+    res.status(500).json({ message: "Error saving data", error: error.message });
+  }
+});
+
+app.get("/posts", async (req, res) => {
+  try {
+    const posts = await Post.find(); 
+    res.status(200).json(posts);
+  } catch (error) {
+    console.error("Error fetching posts:", error.message);
+    res.status(500).json({ message: "Error fetching data", error: error.message });
+  }
+});
+app.delete('/posts/:id', async (req, res) => {
+  try {
+      const deletedPost = await Post.findByIdAndDelete(req.params.id);
+
+      if (!deletedPost) {
+        return res.status(404).json({ message: "Post not found" });
+      }
+
+      res.status(200).json({ message: "Deleted successfully", deletedPost });
+  } catch (error) {
+      res.status(500).json({ error: "Failed to delete", details: error.message });
+  }
+});
+
+
+
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
