@@ -18,7 +18,7 @@ const Home = () => {
       </section>
     <div> 
     <section>
-        <HomeWebinar/>
+        {/* <HomeWebinar/> */}
       </section>
       <section>
         <TrendingVideos/>
@@ -26,6 +26,7 @@ const Home = () => {
       <section>
         <LikedVideos/>
       </section>
+     
      
       <FAQ/>
       <section className="my-5">

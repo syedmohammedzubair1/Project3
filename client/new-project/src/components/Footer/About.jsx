@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/About.avif"; // Ensure the path is correct
+import image from "../../assets/About.avif"; 
 
 const About = () => {
   return (
