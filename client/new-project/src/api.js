@@ -13,7 +13,3 @@ export const uploadLikedVideo = async (formData) =>
 
 export const getLikedVideos = async () =>
   axios.get(`${API_BASE_URL}/liked-videos`);
-
-export const getVideoDetails = async (id) => {
-  return axios.get(`http://localhost:5000/api/video/${id}`);
-};
