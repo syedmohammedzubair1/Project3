@@ -110,9 +110,9 @@ const NicheFlare = ({ searchTerm, setSearchTerm }) => {
     <div className="d-flex flex-column">
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow">
         <div className="container-fluid">
-          <NavLink className="navbar-brand fw-bold text-light" to="#">
+          <button className="navbar-brand fw-bold text-light">
             NicheFlare
-          </NavLink>
+          </button>
           <button
             className="navbar-toggler"
             type="button"
@@ -140,15 +140,28 @@ const NicheFlare = ({ searchTerm, setSearchTerm }) => {
               </button>
             </form>
           </div>
-
           <div className="icons ms-auto d-flex align-items-center">
             <button className="btn btn-outline-light me-2">
               <IoHeartOutline size={24} />
             </button>
-            <button className="btn btn-outline-light me-2">
+
+            {/* 🛒 Cart Button with Badge for Item Count */}
+            <button className="btn btn-outline-light me-2 position-relative" onClick={() => navigate("/cart", { replace: true })}>
               <IoCartOutline size={24} />
+              {totalItems > 0 && (
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {totalItems}
+                </span>
+              )}
             </button>
-            <button className="btn btn-outline-light">
+
+
+            {/* Person Icon - Click to Navigate to Sidebar */}
+            <button
+              className="btn btn-outline-light"
+              onClick={() => navigate("/subscribe/profile")}
+            >
+
               <IoPersonOutline size={24} />
             </button>
           </div>

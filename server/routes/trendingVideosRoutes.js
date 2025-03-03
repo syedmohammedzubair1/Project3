@@ -51,14 +51,31 @@
 // });
 
 // export default router;
+// import express from "express";
+// import { uploadTrendingVideo, getTrendingVideos, deleteTrendingVideo } from "../controllers/trendingVideosController.js";
+// import upload from "../middleware/multerConfig.js";
+
+// const router = express.Router();
+
+// router.post("/upload", upload.single("video"), uploadTrendingVideo);
+// router.get("/", getTrendingVideos);
+// router.delete("/:id", deleteTrendingVideo);
+
+// export default router;
 import express from "express";
-import { uploadTrendingVideo, getTrendingVideos, deleteTrendingVideo } from "../controllers/trendingVideosController.js";
+import { 
+  uploadTrendingVideo, 
+  getTrendingVideos, 
+  getTrendingVideoById,  // ✅ Import this function
+  deleteTrendingVideo 
+} from "../controllers/trendingVideosController.js";
 import upload from "../middleware/multerConfig.js";
 
 const router = express.Router();
 
 router.post("/upload", upload.single("video"), uploadTrendingVideo);
 router.get("/", getTrendingVideos);
+router.get("/:id", getTrendingVideoById);  // ✅ Add this route
 router.delete("/:id", deleteTrendingVideo);
 
 export default router;

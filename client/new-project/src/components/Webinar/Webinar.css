@@ -1,42 +1,29 @@
+/* 
 body {
-  background-color: white;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-.main-div{
-  /* border: 2px solid; */
-  position: relative;
-  top: 50px;
-}
-.search-container {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  } */
+/*   
+  .search-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
 
-}
+  .search-input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-.search-input {
-  width: 50%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  margin-left: 10px;
-  padding: 10px 15px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-@media screen and (max-width: 400px) {
   button {
     height: 50px;
     width: 50px;
@@ -132,7 +119,7 @@ button:hover {
   display: flex;
   align-items: center;
 }
-=======
+
   
   button:hover {
     background-color: #0056b3;
@@ -183,5 +170,4 @@ button:hover {
     font-size: 12px;
     display: inline-block;
   }
-  
->>>>>>> 82ce77e620d138022c4f5a4fc772642eead856a7
+   */

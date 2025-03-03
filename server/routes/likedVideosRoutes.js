@@ -48,13 +48,20 @@
 
 // export default router;
 import express from "express";
-import { uploadLikedVideo, getLikedVideos, deleteLikedVideo } from "../controllers/likedVideosController.js";
+import { 
+  uploadLikedVideo, 
+  getLikedVideos, 
+  getLikedVideoById,  // ✅ Import this function
+  deleteLikedVideo 
+} from "../controllers/likedVideosController.js";
 import upload from "../middleware/multerConfig.js";
 
 const router = express.Router();
 
 router.post("/upload", upload.single("video"), uploadLikedVideo);
 router.get("/", getLikedVideos);
+router.get("/:id", getLikedVideoById);  // ✅ Add this route
 router.delete("/:id", deleteLikedVideo);
 
 export default router;
+

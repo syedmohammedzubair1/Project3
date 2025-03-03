@@ -221,6 +221,38 @@
   
 
 
+// import React, { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import axios from "axios";
+
+// const VideoDetail = () => {
+//   const { id } = useParams();
+//   const [video, setVideo] = useState(null);
+
+//   useEffect(() => {
+//     const fetchVideo = async () => {
+//       try {
+//         const { data } = await axios.get(`http://localhost:4000/api/trending-videos/${id}`);
+//         setVideo(data);
+//       } catch (error) {
+//         console.error("Error fetching video:", error);
+//       }
+//     };
+//     fetchVideo();
+//   }, [id]);
+
+//   if (!video) return<h2 className="mt-5">Loading...</h2>;
+
+//   return (
+//     <div className="container">
+//       <h2>{video.title}</h2>
+//       <video src={`http://localhost:4000${video.videoUrl}`} width="100%" controls />
+//       <p>{video.description}</p>
+//     </div>
+//   );
+// };
+
+// export default VideoDetail;
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -228,26 +260,37 @@ import axios from "axios";
 const VideoDetail = () => {
   const { id } = useParams();
   const [video, setVideo] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("Video ID:", id); // Debugging Step 1
+
     const fetchVideo = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/api/trending-videos/${id}`);
+        const { data } = await axios.get(`http://localhost:4000/api/trending-videos/${id}`);
+        console.log("Fetched video:", data); // Debugging Step 2
         setVideo(data);
       } catch (error) {
         console.error("Error fetching video:", error);
+      } finally {
+        setLoading(false); // Ensure loading state updates
       }
     };
+
     fetchVideo();
   }, [id]);
 
-  if (!video) return<h2 className="mt-5">Loading...</h2>;
+  if (loading) return <h2 className="mt-5">Loading...</h2>;
+  if (!video) return <h2 className="mt-5 text-danger">Video not found!</h2>;
 
   return (
     <div className="container">
-      <h2>{video.title}</h2>
-      <video src={`http://localhost:5000${video.videoUrl}`} width="100%" controls />
-      <p>{video.description}</p>
+      <h2 className="mt-3 text-primary">{video.title}</h2>
+      <video width="100%" controls>
+        <source src={`http://localhost:4000${video.videoUrl}`} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p className="mt-3">{video.description}</p>
     </div>
   );
 };

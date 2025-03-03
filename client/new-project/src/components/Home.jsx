@@ -20,7 +20,7 @@ const Home = () => {
       </section>
       <div>
         <section>
-          <HomeWebinar1 />
+          <HomeWebinar />
         </section>
         <section>
           <TrendingVideos />
