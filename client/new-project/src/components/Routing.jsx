@@ -40,7 +40,7 @@ import CartPage from '../pages/CartPage';
 
 const ProfileLayout = () => {
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: "flex" }}>
       <Sidebar />
       <div style={{ marginLeft: '200px', padding: '20px' }}>
         <Outlet /> {/* Profile child routes render here */}
@@ -56,9 +56,9 @@ const Routing = () => {
         {/* Public Routes */}
         <Route path='/' element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path='/signup' element={<RegistrationForm />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path="/signup" element={<RegistrationForm />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/content" element={<ContentList />} />
         <Route path="/content/:id" element={<ContentDetail />} />
         {/* <Route path="/video/:id" element={<VideoDetail />} />
@@ -71,7 +71,7 @@ const Routing = () => {
         <Route path="/liked-videos" element={<LikedVideos />} />
 
         {/* Subscribe Panel Route */}
-        <Route path='/subscribe' element={<SubscribePanel />} />
+        <Route path="/subscribe" element={<SubscribePanel />} />
         <Route path="/subscribe/webinar" element={<Webinar />} />
         <Route path="/subscribe/purchase" element={<Purchase />} />
         

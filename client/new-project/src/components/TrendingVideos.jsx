@@ -168,7 +168,7 @@ const TrendingVideos = () => {
                     cursor: "pointer",
                     transition: "transform 0.3s",
                     minHeight: "200px",
-                    height: "455px", // Fixed height for consistency
+                    height: "475px", // Fixed height for consistency
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "./HomeWebinar.css";
@@ -52,24 +52,45 @@ export const dummyData1 = [
 ];
 
 export const HomeWebinar = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const response = await axios.get("http://localhost:4000/posts");
+
+    setData(response.data.slice(0, 3));
+  };
   return (
     <div className="text-center p-4">
-      {/* Heading */}
       <h2 className="mb-4 fw-bold">Webinar</h2>
 
-      {/* Webinar Grid Layout */}
       <div className="container">
         <div className="row g-4">
-          {dummyData1.map((k, index) => (
+          {data.map((k, index) => (
             <div key={index} className="col-md-4">
-              <Card className="shadow-lg border-0">
-                <Card.Img variant="top" src={k.image_url} style={{ height: "180px", objectFit: "cover" }} />
+              <Card className="shadow-lg border-0 card">
+                <Card.Img
+                  variant="top"
+                  src={k.image_url}
+                  style={{ height: "180px", objectFit: "cover" }}
+                />
                 <Card.Body>
                   <Card.Title className="fw-bold">{k.title}</Card.Title>
                   <Card.Text className="text-muted">{k.body}</Card.Text>
                   <Card.Text className="text-secondary small">
                     {new Date(k.publish_date).toDateString()}
                   </Card.Text>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-around" }}
+                  >
+                    <button>Buy Now</button>
+                    <button style={{ backgroundColor: "#5d9150" }}>
+                      Add Cart
+                    </button>
+                  </div>
                 </Card.Body>
               </Card>
             </div>
@@ -77,8 +98,7 @@ export const HomeWebinar = () => {
         </div>
       </div>
 
-      {/* View More Button */}
-      <Link to={"/webinar"}>
+      <Link to={"/subscribe/webinar"}>
         <button
           className="btn btn-primary mt-4 px-4 py-2 rounded-pill fw-bold shadow"
           style={{ transition: "0.3s ease-in-out" }}

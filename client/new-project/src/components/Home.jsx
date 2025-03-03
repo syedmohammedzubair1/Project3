@@ -5,6 +5,7 @@ import LikedVideos from './LikedVideos';
 import LandingPage from './LandingPage';
 import FAQ from './FAQ';
 import { HomeWebinar } from './Webinar/HomeWebinar';
+import { HomeWebinar1 } from './Webinar/HomeWebinar1';
 
 const Home = () => {
   useEffect(() => {

@@ -1,9 +1,10 @@
 import express from "express";
-import dotenv from "dotenv";
-import connectDB from "./database/dbConfig.js"; // ✅ Correct path
-import trendingVideosRoutes from "./routes/trendingVideosRoutes.js";
-import likedVideosRoutes from "./routes/likedVideosRoutes.js";
 import cors from "cors";
+import dotenv from "dotenv";
+import connectDB from "./database/dbconfig.js";
+import postRoutes from "./routes/postRoutes.js";
+import trendingVideosRoutes from "./routes/trendingVideosRoutes.js"; // ✅ Import Trending Videos Routes
+import likedVideosRoutes from "./routes/likedVideosRoutes.js";
 
 dotenv.config();
 connectDB();
